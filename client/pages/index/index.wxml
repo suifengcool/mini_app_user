@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="userinfo" bindtap="login">
+        <image
+            class="userinfo-avatar"
+            src="{{logged ? userInfo.avatarUrl : './user-unlogin.png'}}"
+            background-size="cover"
+        ></image>
+        <view class="userinfo-nickname">欢迎你，{{ userInfo.nickName }}</view>
+        <icon class="iconfont icon-zhiding"></icon>
+    </view>
+    
+    <view class="userinfo-guide">
+        <button bindtap="goHome">即刻开启奇妙之旅</button>
+    </view>
+</view>

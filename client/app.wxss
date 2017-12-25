@@ -1,0 +1,41 @@
+/**app.wxss**/
+@font-face {
+  font-family: 'iconfont';  /* project id 502865 */
+  src: url('//at.alicdn.com/t/font_502865_mjgj4vvc6aoo5hfr.eot');
+  src: url('//at.alicdn.com/t/font_502865_mjgj4vvc6aoo5hfr.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_502865_mjgj4vvc6aoo5hfr.woff') format('woff'),
+  url('//at.alicdn.com/t/font_502865_mjgj4vvc6aoo5hfr.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_502865_mjgj4vvc6aoo5hfr.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:60rpx;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*本项目使用的18个图标  */
+.icon-jiantou1:before{content: '\e600';}
+.icon-jiantou2:before{content: '\e609';}
+.icon-jiantou3:before{content: '\e61e';}
+.icon-jiahao1:before{content: '\e73e';}
+.icon-jiahao2:before{content: '\e61b';}
+.icon-bianji1:before{content: '\e685';}
+.icon-bianji2:before{content: '\e611';}
+.icon-dianhua:before{content: '\e684';}
+.icon-wenda1:before{content: '\e659';}
+.icon-wenda2:before{content: '\e621';}
+.icon-wenda3:before{content: '\e7a1';}
+.icon-rili1:before{content: '\e88c';}
+.icon-rili2:before{content: '\e7f1';}
+.icon-shouye:before{content: '\e603';}
+.icon-wode:before{content: '\e667';}
+.icon-gongju:before{content: '\e930';}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+} 

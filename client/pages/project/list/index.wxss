@@ -1,0 +1,15 @@
+/**index.wxss**/
+page {
+    background: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.swiper {
+  height: 400rpx;
+  width: 100%;
+}
+.swiper image {
+  height: 100%;
+  width: 100%;
+}

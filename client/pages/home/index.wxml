@@ -1,0 +1,124 @@
+<!--index.wxml-->
+<view class="container">
+    <scroll-view scroll-y='true' style="height: 1400rpx;" class="container-home" hidden="{{currentTab != 0}}">
+    	<!--banner-->
+        <view class="banner">
+        	<image
+	            class="banner-img"
+	            src="../../image/banner.jpg"
+	            background-size="cover"
+	        ></image>
+        	<view class="auth-img-box">
+	        	<image
+		            class="auth-img"
+		            src="../../image/me.jpg"
+		            background-size="cover"
+		        ></image>
+	        </view>
+        </view>
+
+        <!--auth-->
+	    <view class="auth-box">
+	    	<view class="auth-name">
+	    		许刚
+	    	</view>
+	    	<view class="auth-job">
+	    		Web前端开发工程师
+	    	</view>
+	    	<view class="auth-decs">
+	    		致力于开发高可维护、可持续、可扩展的高性能web应用
+	    	</view>
+	    </view>
+	    <view class="auth-line"></view>
+
+	    <!--nav-->
+	    <view class="nav-box">
+	    	<view class="nav">
+	    		<image
+		            class="nav-img"
+		            src="../../image/cord.jpg"
+		            background-size="cover"
+		        ></image>
+		        <text>项目展示</text>
+	    	</view>
+	    	<view class="nav">
+	    		<image
+		            class="nav-img"
+		            src="../../image/lagth.jpg"
+		            background-size="cover"
+		        ></image>
+		        <text>开心一刻</text>
+	    	</view>
+	    	<view class="nav">
+	    		<image
+		            class="nav-img"
+		            src="../../image/talk.jpg"
+		            background-size="cover"
+		        ></image>
+		        <text>向我提问</text>
+	    	</view>
+	    </view>
+	    <view class="auth-line"></view>
+
+	    <!--info-->
+	    <view class="info-box">
+	    	<view class="info-title">更多信息<i class="iconfont icon-jiantou2"></i></view>
+	    	<view>姓名：许刚</view>
+	    	<view>籍贯：湖北武汉</view>
+	    	<view>开发经验：3年</view>
+	    	<view>QQ：371801080</view>
+	    	<view>Github：https://github.com/suifengcool</view>
+	    	<view>个人网站：http://xugang.site</view>
+	    </view>
+    </scroll-view>
+
+    <view class="userinfo" hidden="{{currentTab != 1}}">
+       日程
+    </view>
+    <view class="userinfo" hidden="{{currentTab != 2}}">
+       问答
+    </view>
+    <view class="container-user" hidden="{{currentTab != 3}}">
+        <view class="header">
+            <view class="header-title">随风</view>
+            <i class="iconfont icon-bianji2"></i>
+        </view>
+
+        <!-- 列表 -->
+        <view class="list">
+            <navigator url="" class="border-bottom cf">
+                <i class="iconfont icon-rili1 fl"></i>
+                <view class="fl list-item">我的日程</view>
+                <i class="iconfont icon-jiantou3 fr"></i>
+            </navigator>
+            <navigator url="" class="border-bottom cf">
+                <i class="iconfont icon-wenda2 fl"></i>
+                <view class="fl list-item">我的问答</view>
+                <i class="iconfont icon-jiantou3 fr"></i>
+            </navigator>
+            <navigator url="" class="border-bottom cf">
+                <i class="iconfont icon-dianhua fl"></i>
+                <view class="fl list-item">联系我们</view>
+                <i class="iconfont icon-jiantou3 fr"></i>
+            </navigator>
+        </view>
+    </view>
+    <view class="tab">
+        <view class="tab_item {{currentTab == 0 ? ' active' : ''}}" bindtap="changeTab" data-tab="0" >
+            <i class="iconfont icon-shouye"></i>
+            <text class="title">首页</text>
+        </view>
+        <view class="tab_item {{currentTab == 1 ? ' active' : ''}}" bindtap="changeTab" data-tab="1" >
+            <i class="iconfont icon-rili2"></i>
+            <text class="title">日程</text>
+        </view>
+        <view class="tab_item {{currentTab == 2 ? ' active' : ''}}" bindtap="changeTab" data-tab="2" >
+            <i class="iconfont icon-wenda2"></i>
+            <text class="title">问答</text>
+        </view>
+        <view class="tab_item {{currentTab == 3 ? ' active' : ''}}" bindtap="changeTab" data-tab="3" >
+            <i class="iconfont icon-wode"></i>
+            <text class="title">我的</text>
+        </view>
+    </view>
+</view>

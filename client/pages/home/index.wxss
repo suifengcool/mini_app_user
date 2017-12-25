@@ -1,0 +1,200 @@
+/**index.wxss**/
+page {
+    background: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.banner{
+    height: 300rpx;
+    width: 100%;
+    position: relative;
+}
+.banner-img{
+    height: 392rpx;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%)
+}
+.auth-img-box{
+    position: absolute;
+    bottom: -100rpx;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 180rpx;
+    height: 180rpx;
+    padding: 4rpx;
+    background: #fff;
+    text-align: center;
+}
+.auth-img{
+    width: 98%;
+    height: 98%;
+}
+.auth-box{
+    text-align: center;
+    margin-top: 110rpx;
+    font-size: 14pt;
+}
+.auth-line{
+    width: 100%;
+    height: 10rpx;
+    background: #dedede;
+    margin-top: 30rpx;
+}
+.auth-job{
+    margin: 20rpx 0;
+    font-size: 11pt;
+}
+.auth-decs{
+    font-size: 24rpx;
+    color: #979797;
+}
+
+.nav-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 50rpx 60rpx 0 60rpx;
+    box-sizing: border-box;
+    font-size: 10pt;
+    text-align: center;
+}
+.nav-box .nav{
+    width: 140rpx;
+}
+.nav-box .nav .nav-img{
+    width: 100%;
+    height: 140rpx;
+    border-radius: 50%;
+}
+
+.info-box{
+    width: 90%;
+    margin: 0 auto;
+    font-size: 10pt;
+    line-height: 44rpx;
+}
+.info-title{
+    font-size: 11pt;
+    padding: 25rpx 0 5rpx 0;
+    margin-bottom: 15rpx;
+    border-bottom: 1rpx solid #dedede;
+}
+.info-box i{
+    font-size: 10pt;
+    margin-left: 10rpx;
+}
+
+
+
+.tab {
+    position: fixed;
+    bottom: 0;
+    height: 100rpx;
+    width: 100%;
+    background: #F8F8FA;
+    font-size: 24rpx;
+    white-space: nowrap;
+    border-top: .5rpx solid #dedede;
+}
+.tab_item {
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+}
+.active {
+	color: #03ca9d;
+}
+.iconfont {
+	margin-top: 14rpx;
+    width: 55rpx;
+    height: 55rpx;
+    line-height: 55rpx;
+    display: inline-block;
+    font-size: 40rpx;
+    text-aglin: center;
+}
+.title {
+    display: block;
+}
+.container-home, .container-user{
+    width: 100%;
+}
+
+.header{
+    width: 100%;
+    padding-top: 400rpx;
+    background-size: cover;
+    position: relative;
+    background: green;
+}
+.header .header-title{
+    height: 100rpx;
+    line-height: 100rpx;
+    font-size: 44rpx;
+    color: #fff;
+    padding-left: 30rpx;
+}
+.border-bottom{
+    border-bottom: 0.5rpx solid #dedede;
+    padding: 0 30rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    font-size: 30rpx;
+    display: block;
+}
+.header i{ 
+    position: absolute;
+    right: 40rpx;
+    bottom: -30rpx;
+    display: inline-block;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    width: 80rpx;
+    background: #03ca9d;
+    border-radius: 50%;
+    font-size: 14pt;
+    color: #fff;
+}
+.list{
+    margin-top: 32rpx;
+}
+.list .icon-rili1{
+    font-size: 50rpx;
+}
+.list .icon-dianhua{
+    font-size: 48rpx;
+}
+.list .icon-wenda2{
+    margin-left: 5rpx;
+}
+.list .icon-jiantou3{
+    font-size: 30rpx;
+}
+.list-item{
+    height: 90rpx;
+    line-height: 90rpx;
+    font-size: 30rpx;
+    display: block;
+}
+
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.cf:after{
+    display: table;
+    content: '';
+    clear: both;
+}
+.cf{
+    zoom:1;
+}
+
+
