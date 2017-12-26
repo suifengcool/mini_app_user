@@ -4,6 +4,7 @@ page {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    font-family: PingFangSC-Regular;
 }
 .banner{
     height: 300rpx;
@@ -120,23 +121,87 @@ page {
 .title {
     display: block;
 }
-.container-home, .container-user{
+.container-home, .container-user, .container-schedule{
     width: 100%;
 }
-
-.header{
+.container-schedule{
+    padding-top: 50rpx;
+}
+.week-box{
+    height: 48rpx;
+    line-height: 48rpx;
+    background: #F9F9F9;
+    position: fixed;
+    left: 0;
+    top: 0;
     width: 100%;
-    padding-top: 400rpx;
+}
+.week-item{
+    display: inline-block;
+    width: 14.286%;
+    text-align: center;
+    font-size: 24rpx;
+    color: #333;
+}
+.month{
+    background: #fff;
+}
+    
+.month-title{ 
+    font-weight: 300;
+    font-family: PingFangSC-Medium;
+    font-size: 1rem;
+    color: #000;
+    text-align: right;
+    padding: 0  .43rem .26rem 0;
+    line-height: 1.4rem;
+}
+.month-title:after{
+    left: 85%;
+    width: 15%;
+}
+.month-item .month-item-box{
+    margin-top: .175rem;
+    display: inline-block;
+    width: 14.286%;
+    text-align: center;
+    font-size: .6rem;
+    color: #333;
+    padding-bottom: .15rem;
+}
+.num{
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+    margin-top: .25rem;
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 50%;
+    color: #000;
+    margin: 0 auto;
+}
+.on{
+    background: #FD834B;
+    color: #fff;
+}
+
+.container-user-header{
+    width: 100%;
+    height: 400rpx;
     background-size: cover;
     position: relative;
     background: green;
 }
-.header .header-title{
-    height: 100rpx;
-    line-height: 100rpx;
+.container-user-header-img{
+    width: 100%;
+    height: 100%;
+}
+.container-user-header .container-user-header-title{
     font-size: 44rpx;
     color: #fff;
     padding-left: 30rpx;
+    position: absolute;
+    left: 10rpx;
+    bottom: 10rpx;
 }
 .border-bottom{
     border-bottom: 0.5rpx solid #dedede;
@@ -146,7 +211,8 @@ page {
     font-size: 30rpx;
     display: block;
 }
-.header i{ 
+
+.container-user-header i{ 
     position: absolute;
     right: 40rpx;
     bottom: -30rpx;
@@ -160,41 +226,37 @@ page {
     font-size: 14pt;
     color: #fff;
 }
-.list{
+.user-list{
     margin-top: 32rpx;
 }
-.list .icon-rili1{
-    font-size: 50rpx;
+.user-list .list-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 0 26rpx;
 }
-.list .icon-dianhua{
-    font-size: 48rpx;
-}
-.list .icon-wenda2{
-    margin-left: 5rpx;
-}
-.list .icon-jiantou3{
-    font-size: 30rpx;
-}
-.list-item{
+.list-item-text{
     height: 90rpx;
     line-height: 90rpx;
     font-size: 30rpx;
     display: block;
 }
+.list-item-text i{
+    vertical-align: -10%;
+}
+.user-list .icon-rili1{
+    font-size: 50rpx;
+    margin-right: 3rpx;
+}
+.user-list .icon-dianhua{
+    font-size: 48rpx;
+}
+.user-list .icon-wenda2{
+    margin-left: 5rpx;
+}
+.user-list .icon-jiantou3{
+    font-size: 30rpx;
+}
 
-.fl{
-    float: left;
-}
-.fr{
-    float: right;
-}
-.cf:after{
-    display: table;
-    content: '';
-    clear: both;
-}
-.cf{
-    zoom:1;
-}
+
 
 

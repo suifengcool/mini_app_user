@@ -33,14 +33,14 @@
 
 	    <!--nav-->
 	    <view class="nav-box">
-	    	<view class="nav">
+	    	<navigator url= "../project/list/index" class="nav">
 	    		<image
 		            class="nav-img"
 		            src="../../image/cord.jpg"
 		            background-size="cover"
 		        ></image>
 		        <text>项目展示</text>
-	    	</view>
+	    	</navigator>
 	    	<view class="nav">
 	    		<image
 		            class="nav-img"
@@ -72,37 +72,87 @@
 	    </view>
     </scroll-view>
 
-    <view class="userinfo" hidden="{{currentTab != 1}}">
-       日程
-    </view>
+    <!-- 日程 -->
+    <scroll-view scroll-y='true' style="height: 1680rpx;" class="container-schedule" hidden="{{currentTab != 1}}">
+        <view class="week-box">
+            <text class="week-item" wx:for="{{weekList}}" wx:key="unique">{{item}}</text>
+        </view>
+        <view class="month">
+            <view class="border-bottom month-title">{{month-1}}月</view>
+            <view class="month-item">
+                <navigator 
+                    url="../schedule/detail/index" 
+                    wx:for="{{lastMonthList}}" 
+                    wx:key="unique" 
+                    class="month-item-box"
+                >
+                    <view wx:if="{{item}}" class="num">{{item}}</view>
+                </navigator>
+            </view>
+        </view>
+        <view class="month">
+            <view class="border-bottom month-title">{{month}}月</view>
+            <view class="month-item">
+                <navigator 
+                    url="../schedule/detail/index" 
+                    wx:for="{{currentMonthList}}" 
+                    wx:key="unique" 
+                    class="month-item-box"
+                >
+                    <view wx:if="{{item && item != ''}}" class="num {{item == day ? 'on' : ''}}">{{item}}</view>
+                </navigator>
+            </view>
+        </view>
+        <view class="month">
+            <view class="border-bottom month-title">{{month -12 >= 0 ? month - 11 : month + 1}}月</view>
+            <view class="month-item">
+                <navigator 
+                    url="../schedule/detail/index"
+                    wx:for="{{nextMonthList}}" 
+                    wx:key="unique" 
+                    class="month-item-box"
+                >
+                    <view wx:if="{{item}}" class="num">{{item}}</view>
+                </navigator>
+            </view>
+        </view>
+    </scroll-view>
+
+
     <view class="userinfo" hidden="{{currentTab != 2}}">
        问答
     </view>
+
+    <!-- 我的 -->
     <view class="container-user" hidden="{{currentTab != 3}}">
-        <view class="header">
-            <view class="header-title">随风</view>
+        <view class="container-user-header">
+            <image
+                class="container-user-header-img"
+                src="{{userInfo.avatarUrl}}"
+                background-size="cover"
+            ></image>
+            <view class="container-user-header-title">{{userInfo.nickName}}</view>
             <i class="iconfont icon-bianji2"></i>
         </view>
-
         <!-- 列表 -->
-        <view class="list">
-            <navigator url="" class="border-bottom cf">
-                <i class="iconfont icon-rili1 fl"></i>
-                <view class="fl list-item">我的日程</view>
-                <i class="iconfont icon-jiantou3 fr"></i>
+        <view class="user-list">
+            <navigator url="../schedule/detail/index" class="border-bottom list-item">
+                <view class="list-item-text"><i class="iconfont icon-rili1"></i>我的日程</view>
+                <i class="iconfont icon-jiantou3"></i>
             </navigator>
-            <navigator url="" class="border-bottom cf">
-                <i class="iconfont icon-wenda2 fl"></i>
-                <view class="fl list-item">我的问答</view>
-                <i class="iconfont icon-jiantou3 fr"></i>
+            <navigator url="" class="border-bottom list-item">
+                <view class="list-item-text"><i class="iconfont icon-wenda2"></i>我的问答</view>
+                <i class="iconfont icon-jiantou3"></i>
             </navigator>
-            <navigator url="" class="border-bottom cf">
-                <i class="iconfont icon-dianhua fl"></i>
-                <view class="fl list-item">联系我们</view>
-                <i class="iconfont icon-jiantou3 fr"></i>
+            <navigator url="" class="border-bottom list-item">
+                <view class="list-item-text"><i class="iconfont icon-dianhua"></i>联系我们</view>
+                <i class="iconfont icon-jiantou3"></i>
             </navigator>
         </view>
     </view>
+
+
+
     <view class="tab">
         <view class="tab_item {{currentTab == 0 ? ' active' : ''}}" bindtap="changeTab" data-tab="0" >
             <i class="iconfont icon-shouye"></i>

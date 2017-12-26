@@ -44,6 +44,10 @@ Page({
                                 userInfo: result.data.data,
                                 logged: true
                             })
+                            wx.setStorage({
+                                key:"userInfo",
+                                data: result.data.data
+                            })
                         },
 
                         fail(error) {
