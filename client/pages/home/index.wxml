@@ -61,6 +61,50 @@
 	    </view>
 	    <view class="auth-line"></view>
 
+        <view class="project-skill-box">
+            <view class="project-skill-title">技术栈</view>
+            <view class="project-skill-detail">
+                <view class="project-skill-detail-item-box">
+                    <i class="iconfont icon-h5"></i>
+                    <text class="project-skill-detail-item-text">HTML(5)</text>
+                </view>
+                
+                <view class="project-skill-detail-item-box">
+                    <i class="iconfont icon-js"></i>
+                    <text class="project-skill-detail-item-text">JavaScript</text>
+                </view>
+                <view class="project-skill-detail-item-box">
+                    <i class="iconfont icon-webpack"></i>
+                    <text class="project-skill-detail-item-text">Webpack</text>
+                </view>
+                
+                <view class="project-skill-detail-item-box">
+                    <i class="iconfont icon-css"></i>
+                    <text class="project-skill-detail-item-text">CSS(3)</text>
+                </view>
+                <view class="project-skill-detail-item-box">
+                    <i class="iconfont icon-gulp"></i>
+                    <text class="project-skill-detail-item-text">Gulp</text>
+                </view>
+                <view class="project-skill-detail-item-box">
+                    <i class="iconfont icon-node"></i>
+                    <text class="project-skill-detail-item-text">NodeJS</text>
+                </view>
+                <view class="project-skill-detail-item-box">
+                    <i class="iconfont icon-react"></i>
+                    <text class="project-skill-detail-item-text">ReactJS</text>
+                </view>
+                <view class="project-skill-detail-item-box">
+                    <i class="iconfont icon-vue"></i>
+                    <text class="project-skill-detail-item-text">VueJS</text>
+                </view>
+                <view class="project-skill-detail-item-box">
+                    <i class="iconfont icon-mysql"></i>
+                    <text class="project-skill-detail-item-text">MySQL</text>
+                </view>
+            </view>
+        </view>
+
 	    <!--info-->
 	    <view class="info-box">
 	    	<view class="info-title" bindtap="showMoreMsg">
@@ -172,19 +216,19 @@
     <!-- 底部tab -->
     <view class="tab">
         <view class="tab_item {{currentTab == 0 ? ' active' : ''}}" bindtap="changeTab" data-tab="0" >
-            <i class="iconfont icon-shouye"></i>
+            <i class="iconfont icon-shouye iconfont-tab"></i>
             <text class="title">首页</text>
         </view>
         <view class="tab_item {{currentTab == 1 ? ' active' : ''}}" bindtap="changeTab" data-tab="1" >
-            <i class="iconfont icon-rili2"></i>
+            <i class="iconfont icon-rili2 iconfont-tab"></i>
             <text class="title">日程</text>
         </view>
         <view class="tab_item {{currentTab == 2 ? ' active' : ''}}" bindtap="changeTab" data-tab="2" >
-            <i class="iconfont icon-wenda2"></i>
+            <i class="iconfont icon-wenda2 iconfont-tab"></i>
             <text class="title">问答</text>
         </view>
         <view class="tab_item {{currentTab == 3 ? ' active' : ''}}" bindtap="changeTab" data-tab="3" >
-            <i class="iconfont icon-wode"></i>
+            <i class="iconfont icon-wode iconfont-tab"></i>
             <text class="title">我的</text>
         </view>
     </view>
