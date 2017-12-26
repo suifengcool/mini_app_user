@@ -10,7 +10,9 @@
 		"pages/schedule/detail/index",
 		"pages/user/index/index",
 		"pages/user/call/index",
-		"pages/home/index"
+		"pages/home/index",
+		"pages/joke/list/index",
+		"pages/joke/detail/index"
     ],
     "window":{
 		"backgroundColor":"#F6F6F6",

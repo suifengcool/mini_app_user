@@ -7,8 +7,10 @@ var util = require('../../utils/util.js')
 Page({
     data: {
         userInfo: {},
+        isShowDetail: false,
+        height: '1100rpx',
         currentTab: 0, 
-        weekList: ['一','二','三','四','五','六','日'],     // 星期池
+        weekList: ['一','二','三','四','五','六','日'],    // 星期池
         lastMonthList: [],                               // 上月日期池
         currentMonthList: [],                            // 当月日期池
         nextMonthList: [],                               // 下月日期池
@@ -18,6 +20,13 @@ Page({
         year: '',
         month: '',
         day: '' 
+    },
+
+    showMoreMsg (){
+        this.setData({
+            isShowDetail : !this.data.isShowDetail,
+            height: !this.data.isShowDetail ? '1680rpx' : '1100rpx'
+        })
     },
 
     changeTab (e) {

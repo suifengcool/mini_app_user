@@ -1,11 +1,11 @@
 /**app.wxss**/
 @font-face {
   font-family: 'iconfont';  /* project id 502865 */
-  src: url('//at.alicdn.com/t/font_502865_mjgj4vvc6aoo5hfr.eot');
-  src: url('//at.alicdn.com/t/font_502865_mjgj4vvc6aoo5hfr.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_502865_mjgj4vvc6aoo5hfr.woff') format('woff'),
-  url('//at.alicdn.com/t/font_502865_mjgj4vvc6aoo5hfr.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_502865_mjgj4vvc6aoo5hfr.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_502865_dzis3pfny1xos9k9.eot');
+  src: url('//at.alicdn.com/t/font_502865_dzis3pfny1xos9k9.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_502865_dzis3pfny1xos9k9.woff') format('woff'),
+  url('//at.alicdn.com/t/font_502865_dzis3pfny1xos9k9.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_502865_dzis3pfny1xos9k9.svg#iconfont') format('svg');
 }
 .iconfont {
   font-family:"iconfont" !important;
@@ -17,7 +17,8 @@
 
 /*本项目使用的18个图标  */
 .icon-jiantou1:before{content: '\e600';}
-.icon-jiantou2:before{content: '\e609';}
+.icon-jiantou2:before{content: '\e602';}
+.icon-jiantou4:before{content: '\e604';}
 .icon-jiantou3:before{content: '\e61e';}
 .icon-jiahao1:before{content: '\e73e';}
 .icon-jiahao2:before{content: '\e61b';}
@@ -32,6 +33,25 @@
 .icon-shouye:before{content: '\e603';}
 .icon-wode:before{content: '\e667';}
 .icon-gongju:before{content: '\e930';}
+
+.icon-gulp:before{content: '\e64e';}
+.icon-webpack:before{content: '\e738';}
+.icon-vue:before{content: '\e609';}
+.icon-sass:before{content: '\e646';}
+.icon-js:before{content: '\e619';}
+.icon-css:before{content: '\e636';}
+.icon-h5:before{content: '\e624';}
+.icon-react:before{content: '\e770';}
+.icon-mysql:before{content: '\e605';}
+.icon-node:before{content: '\e622';}
+.icon-ps:before{content: '\e606';}
+
+.icon-gongzhonghao:before{content: '\e650';}
+.icon-pcduan:before{content: '\e682';}
+.icon-yidongduan:before{content: '\e607';}
+.icon-webapp:before{content: '\e60b';}
+.icon-xitongguanli:before{content: '\e782';}
+.icon-xiaochengxu:before{content: '\e67d';}
 
 .container {
   display: flex;

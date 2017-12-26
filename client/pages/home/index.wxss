@@ -80,15 +80,18 @@ page {
 }
 .info-title{
     font-size: 11pt;
-    padding: 25rpx 0 5rpx 0;
-    margin-bottom: 15rpx;
-    border-bottom: 1rpx solid #dedede;
+    height: 90rpx;
+    line-height: 90rpx;
+    border-bottom: 0.5rpx solid #dedede;
 }
 .info-box i{
-    font-size: 10pt;
+    font-size: 12pt;
     margin-left: 10rpx;
 }
-
+.info-detail{
+    padding: 15rpx 0;
+    border-bottom: 0.5rpx solid #dedede;
+}
 
 
 .tab {

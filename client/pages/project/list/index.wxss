@@ -8,8 +8,53 @@ page {
 .swiper {
   height: 400rpx;
   width: 100%;
+  margin-bottom: 30rpx;
 }
 .swiper image {
   height: 100%;
   width: 100%;
+}
+
+.project-skill-box .project-skill-title{
+	height: 90rpx;
+	line-height: 90rpx;
+	text-align: center;
+	border-bottom: 0.5rpx solid #dedede;
+	margin-bottom: 30rpx;
+}
+
+.project-skill-box .project-skill-detail{
+	display: flex;
+    flex-wrap: wrap;
+}
+.project-skill-detail-item-box{
+	position: relative;
+	width: 33.333%;
+	margin-bottom: 30rpx;
+	text-align: center;
+}
+.project-skill-detail-item-box::after{
+	display: inline-block;
+	content: '';
+	height: 0.5rpx;
+	width: 80%;
+	background: #dedede;
+}
+.project-skill-detail-item-box::before{
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	display: inline-block;
+	content: '';
+	height: 80%;
+	width: 0.5rpx;
+	background: #dedede;
+}
+.project-skill-detail-item-box i{
+	font-size: 20pt;
+	display: block;
+}
+.project-skill-detail-item-box .project-skill-detail-item-text{
+	font-size: 10pt;
 }

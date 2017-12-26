@@ -1,6 +1,7 @@
 <!--index.wxml-->
 <view class="container">
-    <scroll-view scroll-y='true' style="height: 1400rpx;" class="container-home" hidden="{{currentTab != 0}}">
+    <!-- 首页 -->
+    <scroll-view scroll-y='true' style="height: {{height}};" class="container-home" hidden="{{currentTab != 0}}">
     	<!--banner-->
         <view class="banner">
         	<image
@@ -41,14 +42,14 @@
 		        ></image>
 		        <text>项目展示</text>
 	    	</navigator>
-	    	<view class="nav">
+	    	<navigator url= "../joke/list/index" class="nav">
 	    		<image
 		            class="nav-img"
 		            src="../../image/lagth.jpg"
 		            background-size="cover"
 		        ></image>
 		        <text>开心一刻</text>
-	    	</view>
+	    	</navigator>
 	    	<view class="nav">
 	    		<image
 		            class="nav-img"
@@ -62,15 +63,30 @@
 
 	    <!--info-->
 	    <view class="info-box">
-	    	<view class="info-title">更多信息<i class="iconfont icon-jiantou2"></i></view>
-	    	<view>姓名：许刚</view>
-	    	<view>籍贯：湖北武汉</view>
-	    	<view>开发经验：3年</view>
-	    	<view>QQ：371801080</view>
-	    	<view>Github：https://github.com/suifengcool</view>
-	    	<view>个人网站：http://xugang.site</view>
+	    	<view class="info-title" bindtap="showMoreMsg">
+                更多信息
+                <i wx:if="{{!isShowDetail}}" class="iconfont icon-jiantou2"></i>
+                <i wx:if="{{isShowDetail}}" class="iconfont icon-jiantou4"></i>
+            </view>
+            <view class="info-detail" wx:if="{{isShowDetail}}">
+                <view>姓名：许刚</view>
+                <view>年龄：29岁</view>
+                <view>籍贯：湖北武汉</view>
+                <view>专业：本科金融学</view>
+                <view>毕业院校：湖北工业大学商贸学院</view>
+                <view>毕业时间：2012年6月</view>
+                <view>开发经验：3.5年</view>
+                <view>QQ：371801080</view>
+                <view>Github：https://github.com/suifengcool</view>
+                <view>个人网站：http://xugang.site</view>
+            </view>
+            <view class="info-title">
+                看微简历
+                <i class="iconfont icon-jiantou3"></i>
+            </view>
 	    </view>
     </scroll-view>
+
 
     <!-- 日程 -->
     <scroll-view scroll-y='true' style="height: 1680rpx;" class="container-schedule" hidden="{{currentTab != 1}}">
@@ -119,9 +135,11 @@
     </scroll-view>
 
 
+    <!-- 问答 -->
     <view class="userinfo" hidden="{{currentTab != 2}}">
-       问答
+        
     </view>
+
 
     <!-- 我的 -->
     <view class="container-user" hidden="{{currentTab != 3}}">
@@ -134,7 +152,6 @@
             <view class="container-user-header-title">{{userInfo.nickName}}</view>
             <i class="iconfont icon-bianji2"></i>
         </view>
-        <!-- 列表 -->
         <view class="user-list">
             <navigator url="../schedule/detail/index" class="border-bottom list-item">
                 <view class="list-item-text"><i class="iconfont icon-rili1"></i>我的日程</view>
@@ -152,7 +169,7 @@
     </view>
 
 
-
+    <!-- 底部tab -->
     <view class="tab">
         <view class="tab_item {{currentTab == 0 ? ' active' : ''}}" bindtap="changeTab" data-tab="0" >
             <i class="iconfont icon-shouye"></i>
