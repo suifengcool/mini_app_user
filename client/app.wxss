@@ -20,6 +20,8 @@
 .icon-jiantou2:before{content: '\e602';}
 .icon-jiantou4:before{content: '\e604';}
 .icon-jiantou3:before{content: '\e61e';}
+.icon-jiantou5:before{content: '\e662';}
+.icon-jiantou6:before{content: '\e661';}
 .icon-jiahao1:before{content: '\e73e';}
 .icon-jiahao2:before{content: '\e61b';}
 .icon-bianji1:before{content: '\e685';}

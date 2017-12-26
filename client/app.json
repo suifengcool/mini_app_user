@@ -12,13 +12,14 @@
 		"pages/user/call/index",
 		"pages/home/index",
 		"pages/joke/list/index",
-		"pages/joke/detail/index"
+		"pages/joke/detail/index",
+		"pages/auth/index"
     ],
     "window":{
 		"backgroundColor":"#F6F6F6",
 		"backgroundTextStyle":"light",
 		"navigationBarBackgroundColor": "#F6F6F6",
-		"navigationBarTitleText": "随风",
+		"navigationBarTitleText": "随风-Web Developer",
 		"navigationBarTextStyle":"black"
     }
 }

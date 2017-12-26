@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container">
     <!-- 首页 -->
-    <scroll-view scroll-y='true' style="height: {{height}};" class="container-home" hidden="{{currentTab != 0}}">
+    <scroll-view scroll-y='true' style="height: 2850rpx;" class="container-home" hidden="{{currentTab != 0}}">
     	<!--banner-->
         <view class="banner">
         	<image
@@ -20,9 +20,9 @@
 
         <!--auth-->
 	    <view class="auth-box">
-	    	<view class="auth-name">
-	    		许刚
-	    	</view>
+	    	<navigator url="../auth/index" class="auth-name">
+	    		许刚<i class="iconfont icon-jiantou3"></i>
+	    	</navigator>
 	    	<view class="auth-job">
 	    		Web前端开发工程师
 	    	</view>
@@ -65,54 +65,81 @@
             <view class="project-skill-title">技术栈</view>
             <view class="project-skill-detail">
                 <view class="project-skill-detail-item-box">
-                    <i class="iconfont icon-h5"></i>
+                    <i class="iconfont icon-h5" style="color:#c00"></i>
                     <text class="project-skill-detail-item-text">HTML(5)</text>
                 </view>
-                
                 <view class="project-skill-detail-item-box">
-                    <i class="iconfont icon-js"></i>
+                    <i class="iconfont icon-js" style="color:#136ec2"></i>
                     <text class="project-skill-detail-item-text">JavaScript</text>
                 </view>
                 <view class="project-skill-detail-item-box">
-                    <i class="iconfont icon-webpack"></i>
+                    <i class="iconfont icon-webpack" style="color:rgba(16,58,177,.5)"></i>
                     <text class="project-skill-detail-item-text">Webpack</text>
                 </view>
-                
                 <view class="project-skill-detail-item-box">
-                    <i class="iconfont icon-css"></i>
+                    <i class="iconfont icon-css" style="color:#2d78f4"></i>
                     <text class="project-skill-detail-item-text">CSS(3)</text>
                 </view>
                 <view class="project-skill-detail-item-box">
-                    <i class="iconfont icon-gulp"></i>
+                    <i class="iconfont icon-gulp" style="color:#efbfbf"></i>
                     <text class="project-skill-detail-item-text">Gulp</text>
                 </view>
                 <view class="project-skill-detail-item-box">
-                    <i class="iconfont icon-node"></i>
+                    <i class="iconfont icon-node" style="color:#43853d"></i>
                     <text class="project-skill-detail-item-text">NodeJS</text>
                 </view>
                 <view class="project-skill-detail-item-box">
-                    <i class="iconfont icon-react"></i>
+                    <i class="iconfont icon-react" style="color:#61dafb"></i>
                     <text class="project-skill-detail-item-text">ReactJS</text>
                 </view>
                 <view class="project-skill-detail-item-box">
-                    <i class="iconfont icon-vue"></i>
+                    <i class="iconfont icon-vue" style="color:#42b983"></i>
                     <text class="project-skill-detail-item-text">VueJS</text>
                 </view>
                 <view class="project-skill-detail-item-box">
-                    <i class="iconfont icon-mysql"></i>
+                    <i class="iconfont icon-mysql" style="color:#f29221"></i>
                     <text class="project-skill-detail-item-text">MySQL</text>
                 </view>
             </view>
         </view>
 
-	    <!--info-->
-	    <view class="info-box">
-	    	<view class="info-title" bindtap="showMoreMsg">
-                更多信息
-                <i wx:if="{{!isShowDetail}}" class="iconfont icon-jiantou2"></i>
-                <i wx:if="{{isShowDetail}}" class="iconfont icon-jiantou4"></i>
+        <view class="auth-line"></view>
+
+        <view class="project-skill-box">
+            <view class="project-skill-title">项目类型</view>
+            <view class="project-skill-detail project-type">
+                <view class="project-skill-detail-item-box">
+                    <i class="iconfont icon-pcduan"></i>
+                    <text class="project-skill-detail-item-text">PC端</text>
+                </view>
+                <view class="project-skill-detail-item-box">
+                    <i class="iconfont icon-yidongduan"></i>
+                    <text class="project-skill-detail-item-text">H5移动端</text>
+                </view>
+                <view class="project-skill-detail-item-box">
+                    <i class="iconfont icon-gongzhonghao"></i>
+                    <text class="project-skill-detail-item-text">微信公众号</text>
+                </view>
+                <view class="project-skill-detail-item-box">
+                    <i class="iconfont icon-xiaochengxu"></i>
+                    <text class="project-skill-detail-item-text">微信小程序</text>
+                </view>
+                <view class="project-skill-detail-item-box">
+                    <i class="iconfont icon-webapp"></i>
+                    <text class="project-skill-detail-item-text">WebApp</text>
+                </view>
+                <view class="project-skill-detail-item-box">
+                    <i class="iconfont icon-xitongguanli"></i>
+                    <text class="project-skill-detail-item-text">后台管理系统</text>
+                </view>
             </view>
-            <view class="info-detail" wx:if="{{isShowDetail}}">
+        </view>
+
+        <view class="auth-line"></view>
+
+	    <view class="info-box">
+	    	<view class="info-title">关于作者</view>
+            <view class="info-detail">
                 <view>姓名：许刚</view>
                 <view>年龄：29岁</view>
                 <view>籍贯：湖北武汉</view>
@@ -123,10 +150,6 @@
                 <view>QQ：371801080</view>
                 <view>Github：https://github.com/suifengcool</view>
                 <view>个人网站：http://xugang.site</view>
-            </view>
-            <view class="info-title">
-                看微简历
-                <i class="iconfont icon-jiantou3"></i>
             </view>
 	    </view>
     </scroll-view>
