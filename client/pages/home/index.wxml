@@ -42,7 +42,7 @@
 		        ></image>
 		        <text>项目展示</text>
 	    	</navigator>
-	    	<navigator url= "../joke/list/index" class="nav">
+	    	<navigator url= "../joke/index/index" class="nav">
 	    		<image
 		            class="nav-img"
 		            src="../../image/lagth.jpg"
@@ -109,27 +109,27 @@
             <view class="project-skill-title">项目类型</view>
             <view class="project-skill-detail project-type">
                 <view class="project-skill-detail-item-box">
-                    <i class="iconfont icon-pcduan"></i>
+                    <i class="iconfont icon-pcduan" style="color:#979797"></i>
                     <text class="project-skill-detail-item-text">PC端</text>
                 </view>
                 <view class="project-skill-detail-item-box">
-                    <i class="iconfont icon-yidongduan"></i>
+                    <i class="iconfont icon-yidongduan" style="color:rgb(12, 163, 240)"></i>
                     <text class="project-skill-detail-item-text">H5移动端</text>
                 </view>
                 <view class="project-skill-detail-item-box">
-                    <i class="iconfont icon-gongzhonghao"></i>
+                    <i class="iconfont icon-gongzhonghao2" style="color:rgb(114, 189, 99)"></i>
                     <text class="project-skill-detail-item-text">微信公众号</text>
                 </view>
                 <view class="project-skill-detail-item-box">
-                    <i class="iconfont icon-xiaochengxu"></i>
+                    <i class="iconfont icon-xiaochengxu" style="color:rgb(22, 211, 40)"></i>
                     <text class="project-skill-detail-item-text">微信小程序</text>
                 </view>
                 <view class="project-skill-detail-item-box">
-                    <i class="iconfont icon-webapp"></i>
+                    <i class="iconfont icon-webapp" style="color:rgb(52, 152, 219)"></i>
                     <text class="project-skill-detail-item-text">WebApp</text>
                 </view>
                 <view class="project-skill-detail-item-box">
-                    <i class="iconfont icon-xitongguanli"></i>
+                    <i class="iconfont icon-xitongguanli" style="color:rgb(36, 167, 242)"></i>
                     <text class="project-skill-detail-item-text">后台管理系统</text>
                 </view>
             </view>

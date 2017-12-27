@@ -1,4 +1,28 @@
 <!--index.wxml-->
 <view class="container">
-    项目详情页
+	<view class="header">
+		<image
+            class="header-img"
+            src="../../../image/banner.jpg"
+            background-size="cover"
+        ></image>
+        <view class="header-desc">
+        	<view class="header-desc-name">店族</view>
+        	<view class="header-desc-type">微信公众号</view>
+        	<view class="header-desc-score">分数</view>
+        	<view class="header-desc-skills">
+        		<view class="header-desc-skills-item">VueJS</view>
+        		<view class="header-desc-skills-item">NodeJS</view>
+        		<view class="header-desc-skills-item">Sass</view>
+        		<view class="header-desc-skills-item">Webpack</view>
+        	</view>
+    	</view>
+	</view>
+
+	<view class="tab">
+		<view class="tab-item on">介绍</view>
+		<view class="tab-item">评论</view>
+		<view class="tab-item tab-item-last">推荐</view>
+	</view>
+    
 </view>

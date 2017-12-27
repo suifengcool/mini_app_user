@@ -12,10 +12,10 @@ Page({
 		    {url:'../../../image/weixin2.png'}     
 	    ],
 	    sortStatus: [{
-	    	name:'评分',sortUp:true
-	    },{
 	    	name:'日期',sortUp:true
-	    }]
+	    }],
+	    inputValue: '',
+	    scroll_x: true
     },
 
     getSort(e){
@@ -33,5 +33,15 @@ Page({
 			sortStatus: sortStatus
 		})
 
+    },
+
+    search() {
+		console.log('bindKeyInput:',this.data.inputValue)
+    },
+
+    bindKeyInput: function(e) {
+	    this.setData({
+	        inputValue: e.detail.value
+	    })
     }
 })

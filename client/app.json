@@ -11,8 +11,7 @@
 		"pages/user/index/index",
 		"pages/user/call/index",
 		"pages/home/index",
-		"pages/joke/list/index",
-		"pages/joke/detail/index",
+		"pages/joke/index/index",
 		"pages/auth/index"
     ],
     "window":{

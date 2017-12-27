@@ -5,6 +5,12 @@ var util = require('../../../utils/util.js')
 
 Page({
     data: {
-        
+        id: ''
+    },
+
+    onLoad: function(options){
+		this.setData({
+			id: options.id
+		})
     }
 })

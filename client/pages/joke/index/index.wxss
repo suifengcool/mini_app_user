@@ -1,0 +1,73 @@
+/**index.wxss**/
+page {
+    background-color: rgba(255,191,0,0.44);
+}
+
+.container-joke{
+	position: absolute;
+	left: 50%;
+	top: 42%;
+	transform: translate(-50%,-50%);
+	width: 100%;
+}
+
+.joke-title{
+	text-align: center;
+	height: 90rpx;
+	line-height: 90rpx;
+}
+.joke-title .iconfont{
+	color:#383838;
+	margin-left:10rpx;
+}
+
+.joke-content{
+	border:1px solid #333;
+	padding:40rpx;
+	width:80%;
+	margin:50rpx auto;
+	border-radius:5px;
+	font-size: 13pt;
+}
+
+.joke-btn, .submitBtn{
+	height: 70rpx;
+	line-height: 70rpx;
+	width:200rpx;
+	font-size:12pt;
+	margin-right:38rpx;
+	background: rgba(241, 170, 51, 0.58);
+	color: #383838;
+}
+.joke-btn .iconfont{
+	margin-right:3px;
+	font-size:12pt;
+}
+
+.create{
+	text-align:center;
+	margin-top:50rpx;
+	font-size:11pt;
+	color:#383838;
+	height:90rpx;
+	line-height:90rpx;
+}
+
+textarea{
+	width: 94%;
+	min-height: 400rpx;
+	border:0.5rpx solid #333;
+	margin:20rpx auto;
+	padding:10rpx;
+	box-sizing:border-box;
+	border-radius:5rpx;
+	font-size: 13pt;
+}
+.num{
+	position: relative;
+	top: -68rpx;
+	color: red;
+	text-align: right;
+	right: 40rpx;
+	font-size: 10pt;
+}

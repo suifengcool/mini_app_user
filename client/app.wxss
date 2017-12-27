@@ -1,11 +1,11 @@
 /**app.wxss**/
 @font-face {
   font-family: 'iconfont';  /* project id 502865 */
-  src: url('//at.alicdn.com/t/font_502865_dzis3pfny1xos9k9.eot');
-  src: url('//at.alicdn.com/t/font_502865_dzis3pfny1xos9k9.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_502865_dzis3pfny1xos9k9.woff') format('woff'),
-  url('//at.alicdn.com/t/font_502865_dzis3pfny1xos9k9.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_502865_dzis3pfny1xos9k9.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_502865_wd9kz7kjcdipmn29.eot');
+  src: url('//at.alicdn.com/t/font_502865_wd9kz7kjcdipmn29.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_502865_wd9kz7kjcdipmn29.woff') format('woff'),
+  url('//at.alicdn.com/t/font_502865_wd9kz7kjcdipmn29.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_502865_wd9kz7kjcdipmn29.svg#iconfont') format('svg');
 }
 .iconfont {
   font-family:"iconfont" !important;
@@ -47,13 +47,26 @@
 .icon-mysql:before{content: '\e605';}
 .icon-node:before{content: '\e622';}
 .icon-ps:before{content: '\e606';}
-
 .icon-gongzhonghao:before{content: '\e650';}
+.icon-gongzhonghao2:before{content: '\e618';}
 .icon-pcduan:before{content: '\e682';}
 .icon-yidongduan:before{content: '\e607';}
-.icon-webapp:before{content: '\e60b';}
+.icon-webapp:before{content: '\e608';}
 .icon-xitongguanli:before{content: '\e782';}
 .icon-xiaochengxu:before{content: '\e67d';}
+
+.icon-xiaolian:before{content: '\e733';}
+.icon-jianli:before{content: '\e67b';}
+.icon-sousuo:before{content: '\e64c';}
+.icon-down:before{content: '\e648';}
+.icon-up:before{content: '\e647';}
+.icon-change:before{content: '\e629';}
+
+.icon-star1:before{content: '\e66f';}
+.icon-star2:before{content: '\e66e';}
+.icon-star3:before{content: '\e60a';}
+.icon-star4:before{content: '\e65a';}
+.icon-star5:before{content: '\e723';}
 
 .container {
   display: flex;

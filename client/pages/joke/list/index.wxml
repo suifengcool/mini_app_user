@@ -1,8 +1,0 @@
-<!--index.wxml-->
-<view class="container-joke-list">
-    <view class="joke-title">开心一刻</view>
-    <view class="joke-content">
-        去一家刚开业的米粉店吃米粉，正吃着的时候，店老板接了个电话，应该是他的什么朋友打电话来询问开业生意如何？只听这老板骂骂咧咧道：生意冷清啊！奶奶的，稀稀拉拉没几个人，就说现在吧，他妈的，只有一个SB顾客在吃。。。
-    </view>
-    <button class="joke-btn">换一个</button>
-</view>

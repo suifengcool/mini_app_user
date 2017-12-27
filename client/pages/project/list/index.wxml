@@ -1,25 +1,60 @@
 <!--index.wxml-->
 <view class="container">
-	<scroll-view scroll-y='true' style="height: 1000rpx;" class="project-box">
+	<scroll-view scroll-y='true' style="height: 1400rpx;" class="project-box">
 	    <swiper class="swiper" indicator-dots="true" autoplay="true" interval="3000" duration="1000">    
 	        <block wx:for="{{movies}}" wx:key="unique">    
 		        <swiper-item>    
 		          <image src="{{item.url}}" class="slide-image" mode="aspectFill"/>  
 		        </swiper-item>    
-	        </block>    
+	        </block> 
+	        <view class="search">
+	        	<input bindinput="bindKeyInput" placeholder="搜索"/> 
+	        	<view class="btn" bindtap="search">
+	        		<i class="iconfont icon-sousuo"></i> 
+	        	</view>
+	        </view>
 	    </swiper>
+	    <view class="list-title">
+            <view class="title"><i>|</i><span>项目类型</span></view>
+        </view>
+        <scroll-view class="type-box" scroll-x='{{scroll_x}}'>
+        	<view class="type-item">
+                <i class="iconfont icon-pcduan" style="color:#979797"></i>
+                <text class="type-item-text">PC端</text>
+            </view>
+            <view class="type-item">
+                <i class="iconfont icon-yidongduan" style="color:rgb(12, 163, 240)"></i>
+                <text class="type-item-text">H5移动端</text>
+            </view>
+            <view class="type-item">
+                <i class="iconfont icon-gongzhonghao2" style="color:rgb(114, 189, 99)"></i>
+                <text class="type-item-text">微信公众号</text>
+            </view>
+            <view class="type-item">
+                <i class="iconfont icon-xiaochengxu" style="color:rgb(22, 211, 40)"></i>
+                <text class="type-item-text">微信小程序</text>
+            </view>
+            <view class="type-item">
+                <i class="iconfont icon-webapp" style="color:rgb(52, 152, 219)"></i>
+                <text class="type-item-text">WebApp</text>
+            </view>
+            <view class="type-item">
+                <i class="iconfont icon-xitongguanli" style="color:rgb(36, 167, 242)"></i>
+                <text class="type-item-text">管理系统</text>
+            </view>
+	    </scroll-view>
     	<view class="list-title">
             <view class="title"><i>|</i><span>项目列表</span></view>
             <view class="listStyle">
                 <view class="sort-text" wx:for="{{sortStatus}}" wx:key="unique" bindtap="getSort" data-item="{{item}}">
                     {{item.name}}
-                    <i class="iconfont {{!item.sortUp ? 'icon-jiantou5' : 'icon-jiantou6'}}"></i>
+                    <i class="iconfont {{!item.sortUp ? 'icon-jiantou6' : 'icon-jiantou5'}}"></i>
                 </view>
             </view>
         </view>
 
         <view class="list-box">
-	        <view class="list">
+	        <navigator url="../detail/index?id=1" class="list">
 	        	<image
 		            class="img"
 		            src="../../../image/banner.jpg"
@@ -30,7 +65,7 @@
 		        	<view class="time">开发时间：2017年4月至2017年7月</view>
 		        	<view class="type">项目类型：微信公众号</view>
 		        </view>
-	        </view>
+	        </navigator>
 	        <view class="list">
 	        	<image
 		            class="img"

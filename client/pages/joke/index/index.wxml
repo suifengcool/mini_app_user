@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="container-joke">
+    <view class="joke-title">开心一刻<i class="iconfont icon-xiaolian"></i></view>
+    <form wx:if="{{edit}}" bindsubmit="submitJoke" class="form">
+	    <textarea  placeholder="在这里分享你的快乐哦~~" focus="{{focus}}" name="textarea"/>
+	    <view class="num">最多140个字</view>
+	    <button class="submitBtn" form-type="submit"> 提交 </button>
+	</form>
+    <view wx:if="{{!edit}}" class="joke-content">
+        {{joke}}
+    </view>
+    <button wx:if="{{!edit}}" class="joke-btn" bindtap="change"><i class="iconfont icon-change"></i>换一个</button>
+    <view class="create" bindtap="create">{{edit?'算了，不想写了':'不好笑，我来写一个?'}}</view>
+</view>

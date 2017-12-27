@@ -6,3 +6,67 @@ page {
     justify-content: flex-start;
 }
 
+.header{
+    display: flex;
+    padding: 30rpx;
+    width: 100%;
+}
+.header-img{
+    width: 140rpx;
+    height: 140rpx;
+    border-radius: 5rpx;
+    margin: 0 20rpx 0 30rpx;
+}
+.header-desc{
+    flex: 1;
+    margin-right: 30rpx;
+}
+.header-desc-name{
+    font-size: 10pt;
+}
+.header-desc-type{
+    font-size: 9pt;
+    color: #979797;
+    margin: 6rpx 0;
+}
+.header-desc-score{
+    font-size: 7pt;
+}
+.header-desc-skills{
+    font-size: 7pt;
+    display: flex;
+    margin-top:5rpx;
+}
+.header-desc-skills-item{
+    padding:7rpx 20rpx;
+    border-radius:20rpx;
+    background:#dedede;
+    margin-right:20rpx;
+    height:20rpx;
+    line-height:20rpx;
+}
+
+.tab{
+    width: 82%;
+    margin: 0 auto;
+    line-height: 40rpx;
+    border-radius: 20rpx;
+    border: 1px solid #84C1FF;
+}
+
+.tab .tab-item{
+    width: 33%;
+    display: inline-block;
+    height: 40rpx;
+    line-height: 40rpx;
+    font-size: 10pt;
+    text-align: center;
+    border-right: 0.5rpx solid #84C1FF;
+}
+.tab .tab-item-last{
+    border: none;
+}
+.on{
+    background: #ACD6FF;
+    color: #84C1FF;
+}
