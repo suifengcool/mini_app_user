@@ -1,18 +1,15 @@
 {
     "pages":[
 		"pages/index/index",
+		"pages/home/index",
 		"pages/addCgi/addCgi",
 		"pages/project/list/index",
 		"pages/project/detail/index",
-		"pages/issue/list/index",
 		"pages/issue/detail/index",
-		"pages/schedule/index/index",
 		"pages/schedule/detail/index",
-		"pages/user/index/index",
-		"pages/user/call/index",
-		"pages/home/index",
 		"pages/joke/index/index",
-		"pages/auth/index"
+		"pages/auth/index/index",
+		"pages/auth/call/index"
     ],
     "window":{
 		"backgroundColor":"#F6F6F6",

@@ -20,9 +20,9 @@
 
         <!--auth-->
 	    <view class="auth-box">
-	    	<navigator url="../auth/index" class="auth-name">
-	    		许刚<i class="iconfont icon-jiantou3"></i>
-	    	</navigator>
+	    	<view class="auth-name">
+	    		许刚<!-- <i class="iconfont icon-jiantou3"></i> -->
+	    	</view>
 	    	<view class="auth-job">
 	    		Web前端开发工程师
 	    	</view>
@@ -224,11 +224,11 @@
                 <view class="list-item-text"><i class="iconfont icon-rili1"></i>我的日程</view>
                 <i class="iconfont icon-jiantou3"></i>
             </navigator>
-            <navigator url="" class="border-bottom list-item">
+            <navigator url="../issue/detail/index" class="border-bottom list-item">
                 <view class="list-item-text"><i class="iconfont icon-wenda2"></i>我的问答</view>
                 <i class="iconfont icon-jiantou3"></i>
             </navigator>
-            <navigator url="" class="border-bottom list-item">
+            <navigator url="../auth/call/index" class="border-bottom list-item">
                 <view class="list-item-text"><i class="iconfont icon-dianhua"></i>联系我们</view>
                 <i class="iconfont icon-jiantou3"></i>
             </navigator>

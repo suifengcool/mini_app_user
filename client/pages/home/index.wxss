@@ -251,20 +251,24 @@ page {
     display: block;
 }
 .list-item-text i{
-    vertical-align: -10%;
+    vertical-align: -3.5%;
 }
 .user-list .icon-rili1{
-    font-size: 50rpx;
+    font-size: 16pt;
     margin-right: 3rpx;
 }
 .user-list .icon-dianhua{
-    font-size: 48rpx;
+    font-size: 15pt;
+    margin-right:7rpx;
 }
 .user-list .icon-wenda2{
     margin-left: 5rpx;
+    margin-right:9rpx;
+    font-size: 13pt;
 }
 .user-list .icon-jiantou3{
-    font-size: 30rpx;
+    font-size: 13pt;
+    margin-right: 30rpx;
 }
 
 

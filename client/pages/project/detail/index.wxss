@@ -49,24 +49,77 @@ page {
 .tab{
     width: 82%;
     margin: 0 auto;
-    line-height: 40rpx;
     border-radius: 20rpx;
-    border: 1px solid #84C1FF;
+    display: flex;
 }
 
 .tab .tab-item{
     width: 33%;
     display: inline-block;
-    height: 40rpx;
+    height: 38rpx;
     line-height: 40rpx;
     font-size: 10pt;
     text-align: center;
-    border-right: 0.5rpx solid #84C1FF;
+    border: 0.5rpx solid #84C1FF;
+}
+
+.tab .tab-item-second{
+    border-right: none;
+    border-left: none;
+}
+.tab .tab-item-first{
+    border-top-left-radius:20rpx;
+    border-bottom-left-radius:20rpx;
 }
 .tab .tab-item-last{
-    border: none;
+    border-top-right-radius:20rpx;
+    border-bottom-right-radius:20rpx;
 }
 .on{
     background: #ACD6FF;
     color: #84C1FF;
+}
+
+.pic-box{
+    white-space: nowrap;
+    width: 95%;
+    min-height: 500rpx;
+    margin: 30rpx auto;
+}
+.pic-item{
+    width: 100%;
+}
+
+.desc{
+    line-height: 40rpx;
+    padding:0 30rpx;
+}
+.desc-text{
+    font-size: 9pt;
+}
+.desc-text i{
+    color: #979797;
+    margin-right: 20rpx;
+    font-style: normal;
+    display:inline-block;
+    width:104rpx;
+}
+.line{
+    margin: 40rpx auto;
+    width: 90%;
+    height: 0.5rpx;
+    background: #dedede;
+}
+.project-box{
+    padding: 0 30rpx;
+    margin-bottom: 30rpx;
+}
+.title{
+    font-size:11pt;
+    margin-bottom:30rpx;
+}
+.content{
+    font-size:9pt;
+    color:#979797;
+    line-height:45rpx;
 }

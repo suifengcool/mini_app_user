@@ -93,8 +93,6 @@ page {
 .type-box{
     width: 100%;
     height: 150rpx;
-}
-.type-box{
     white-space: nowrap;
 }
 .type-box .type-item{
