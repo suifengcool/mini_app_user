@@ -6,6 +6,7 @@
 		"pages/project/list/index",
 		"pages/project/detail/index",
 		"pages/issue/detail/index",
+		"pages/issue/create/index",
 		"pages/schedule/detail/index",
 		"pages/joke/index/index",
 		"pages/auth/index/index",

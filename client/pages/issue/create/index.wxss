@@ -1,0 +1,58 @@
+/**index.wxss**/
+page {
+    background: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.container{
+	width: 100%;
+}
+.item{
+	width: 100%;
+	border-bottom: 0.5rpx solid #dedede;
+	padding: 0 30rpx;
+	box-sizing:border-box;
+}
+.title-box{
+	display:flex;
+	height:90rpx;
+	font-size:4%;
+	border-top:0.5rpx solid #dedede;
+}
+.title-icon{
+	height:90rpx;
+	line-height:90rpx;
+}
+.title-box .icon-title{
+	margin-right:20rpx;
+	font-size:12pt;
+	vertical-align:4%;
+}
+.title-box input{
+	font-size:11pt;
+	height:90rpx;
+	padding-top:6rpx;
+	box-sizing:border-box;
+}
+
+.content-box{
+	display: flex;
+	padding-top:20rpx;
+}
+.content-box .icon-yiwen{
+	margin-left:-8rpx;
+	font-size:17pt;
+	margin-right:10rpx;
+}
+.type-box{
+	font-size:11pt;
+	color:#444;
+	width: 100%;
+	box-sizing:border-box;
+	padding-left: 30rpx;
+}
+.icon-fenlei{
+	margin-right: 5rpx;
+	font-size: 12pt;
+}

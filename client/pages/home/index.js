@@ -32,6 +32,12 @@ Page({
         })
     },
 
+    goToAnswer(){
+        this.setData({
+            currentTab : 2
+        })
+    },
+
     onLoad: function(){
         var _this = this;
         wx.getStorage({

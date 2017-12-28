@@ -64,7 +64,7 @@ page {
     vertical-align: 4%;
 }
 .listStyle .sort-text{
-    font-size: 30rpx;
+    font-size: 10pt;
     margin-left: 12rpx;
     display: inline-block;
 }

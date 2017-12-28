@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class="container">
+	<view class="title-box item">
+		<view class="title-icon">	
+			<i class="iconfont icon-title"></i>
+		</view>
+		<input placeholder="标题"/>
+	</view>
+	<view class="content-box item">
+		<i class="iconfont icon-yiwen"></i>
+		<textarea placeholder-style="font-size:12pt" placeholder="此刻你的疑问..." name="textarea"/>
+	</view>
+	<view class="type-box">
+		<view class="type-box-title">
+			<i class="iconfont icon-fenlei"></i>
+			选择分类
+		</view>
+		
+	</view>
+</view>
