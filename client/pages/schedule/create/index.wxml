@@ -5,7 +5,6 @@
             <i class="iconfont icon-title"></i>
         </view>
         <input placeholder="标题"/>
-        <view class="btn">发布</view>
     </view>
     <view class="content-box item">
         <i class="iconfont icon-bianji1"></i>
@@ -31,4 +30,5 @@
             </view>
         </view>
     </view>
+    <view class="btn">发布</view>
 </view>

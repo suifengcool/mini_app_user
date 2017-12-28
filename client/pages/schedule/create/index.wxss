@@ -7,6 +7,7 @@ page {
 }
 .container{
     width: 100%;
+    margin-bottom: 100rpx;
 }
 .item{
     width: 100%;
@@ -22,19 +23,16 @@ page {
     position: relative;
 }
 .btn{
-    position:absolute;
-    right:30rpx;
-    top:50%;
-    transform:translateY(-50%);
-    width:73rpx;
+    position:fixed;
+    left: 0;
+    bottom: 0;
+    width:100%;
     text-align:center;
     font-size:9pt;
-    height:45rpx;
-    line-height:45rpx;
+    height:90rpx;
+    line-height:90rpx;
     color:#fff;
     background:#03ca9d;
-    border-radius:5rpx;
-    box-shadow:1rpx 1rpx 4rpx #888;
 }
 .title-icon{
     height:90rpx;
