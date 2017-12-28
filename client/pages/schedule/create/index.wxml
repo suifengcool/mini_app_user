@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="title-box item">
+        <view class="title-icon">   
+            <i class="iconfont icon-title"></i>
+        </view>
+        <input placeholder="标题"/>
+        <view class="btn">发布</view>
+    </view>
+    <view class="content-box item">
+        <i class="iconfont icon-bianji1"></i>
+        <textarea placeholder-style="font-size:12pt" placeholder="记下免得忘记哦~" name="textarea"/>
+        <view class="tip">最多140字</view>
+    </view>
+    <view class="title-box item">
+        <view class="title-icon">   
+            <i class="iconfont icon-adress"></i>
+        </view>
+        <input placeholder="地点"/>
+    </view>
+    <view class="time-box">
+        <i class="iconfont icon-clock2"></i>
+        <view class="time-list">
+            <view class="time-item">
+                <view class="time-item-left">开始</view>
+                <view class="time-item-right"></view>
+            </view>
+            <view class="time-item">
+                <view class="time-item-left">结束</view>
+                <view class="time-item-right"></view>
+            </view>
+        </view>
+    </view>
+</view>

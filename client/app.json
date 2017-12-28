@@ -8,6 +8,7 @@
 		"pages/issue/detail/index",
 		"pages/issue/create/index",
 		"pages/schedule/detail/index",
+		"pages/schedule/create/index",
 		"pages/joke/index/index",
 		"pages/auth/index/index",
 		"pages/auth/call/index"

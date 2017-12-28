@@ -6,12 +6,23 @@ var moment = require('../../../vendor/wafer2-client-sdk/lib/moment/we-moment-wit
 
 Page({
     data: {
-        weekList: ['一','二','三','四','五','六','日'],           // 星期池
+        weekList: ['一','二','三','四','五','六','日'],          // 星期池
         dayList: [],                                           // 日期池
-        year: '',                          // 当前年
-        month: '',                        // 当前月
-        day: '',                            // 当前日
-        WeekDay: '1',                                           // 当前日期是本周几
+        year: '',                                              // 当前年
+        month: '',                                             // 当前月
+        day: '',                                               // 当前日
+        chooseDay: '',                                         // 选中日
+        WeekDay: '1',                                          // 当前日期是本周几
+        eventList:[{
+            title: '圣诞节',
+            content: '要去逛街，买衣服，好多事情哦，要去逛街，买衣服，好多事情哦，要去逛街，买衣服，好多事情哦，要去逛街，买衣服，好多事情哦'
+        },{
+            title: '圣诞节',
+            content: '要去逛街，买衣服，好多事情哦，要去逛街，买衣服，好多事情哦，要去逛街，买衣服，好多事情哦，要去逛街，买衣服，好多事情哦'
+        },{
+            title: '圣诞节',
+            content: '要去逛街，买衣服，好多事情哦，要去逛街，买衣服，好多事情哦，要去逛街，买衣服，好多事情哦，要去逛街，买衣服，好多事情哦'
+        }]
     },
 
     onLoad: function(options){
@@ -23,6 +34,14 @@ Page({
 		this.fetchDayList()
     },
 
+    chooseDay(e){
+        console.log('e:',e.currentTarget.dataset.choosed)
+        this.setData({
+            chooseDay: e.currentTarget.dataset.choosed
+        })
+        
+    },
+
     // 渲染周日历
     fetchDayList(){
     	var dayList = [];
@@ -31,13 +50,10 @@ Page({
         this.setData({
         	WeekDay: WeekDay
         })         
-        
-
         for(var i=1,j=WeekDay;i<j;i++){
             var item = moment(today).subtract(i,'day').format('D')
             dayList.unshift(item)
         }
-
         for(var k=0;k<=7-WeekDay;k++){
             var item = moment(today).add(k,'day').format('D')
             dayList.push(item)
