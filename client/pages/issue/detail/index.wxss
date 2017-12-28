@@ -5,3 +5,135 @@ page {
     flex-direction: column;
     justify-content: flex-start;
 }
+.container{
+	margin-bottom: 120rpx;
+}
+.title{
+	padding:0 30rpx;
+}
+.tip-box{
+	display: flex;
+	margin: 30rpx 0 30rpx 0;
+	width: 90%;
+}
+.img{
+	width: 45rpx;
+	height: 45rpx;
+	border-radius: 50%;
+	margin-right: 30rpx;
+}
+.tip{
+	font-size: 8pt;
+	color: #979797;
+	height: 45rpx;
+	line-height: 45rpx;
+}
+.issue{
+	text-indent: 56rpx;
+	font-size:11pt;
+	color:#333;
+	line-height:1.5;
+	padding:0 30rpx;
+}
+.line{
+	width: 100%;
+	height: 10rpx;
+	background: #dedede;
+	margin-top: 30rpx;
+}
+
+.solve-title, .comment-title{
+    display: flex;
+    justify-content: space-between;
+    height: 68rpx;
+    line-height: 68rpx;
+    border-top: 0.5rpx solid #E7E7E7;
+    border-bottom: 0.5rpx solid #E7E7E7;
+    font-size: 30rpx;
+    padding:0 30rpx;
+}
+.solve-title i, .comment-title i{
+    color: #00C99D;
+    margin-right: 7rpx;
+    font-weight: 700;
+    vertical-align: 4%;
+}
+.solve-content{
+	text-indent: 56rpx;
+	padding:0 30rpx;
+	font-size:11pt;
+	color:#333;
+	margin-top: 15rpx;
+}
+.comment{
+	width: 100%;
+}
+.comment-list{
+	padding:0 30rpx;
+}
+.comment-item{
+	display: flex;
+	padding-top: 20rpx;
+	border-bottom: 0.5rpx solid #dedede;
+}
+.comment-img{
+	width: 70rpx;
+	height: 70rpx;
+	margin-right: 20rpx;
+}
+.comment-main{
+	flex: 1;
+}
+.comment-name{
+	font-size: 9pt;
+	color: #03ca9d;
+}
+.comment-content{
+	font-size: 10pt;
+	margin: 15rpx 0;
+}
+.comment-tips{
+	color: #979797;
+	font-size: 7pt;
+	margin-bottom: 30rpx;
+}
+
+.tabbar{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: #fff;
+	height:90rpx;
+	line-height: 90rpx;
+	display: flex;
+	justify-content: space-between;
+}
+.tabbar-icon{
+	margin-left: 10rpx;
+	display: flex;
+	width: 50%;
+}
+.tabbar-icon-item{
+	width: 80rpx;
+	height: 90rpx;
+	line-height: 90rpx;
+	text-align: center;
+}
+.tabbar-icon .iconfont{
+	font-size: 11pt;
+}
+.tabbar-icon .icon-pinglun2{
+	font-size: 12pt;
+}
+.tabbar-text{
+	margin-right: 30rpx;
+	color: #979797;
+	font-size:10pt;
+}
+.tabbar-text i{
+	margin: 0 10rpx;
+}
+.active{
+	color: #03ca9d;
+}

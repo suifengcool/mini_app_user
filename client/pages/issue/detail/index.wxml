@@ -1,4 +1,97 @@
 <!--index.wxml-->
 <view class="container">
-   问答详情页
+    <view class="title">深入Weex系列（九）可借鉴细节总结深入Weex系列（九）可借鉴细节总结深入Weex系列（九）可借鉴细节总结</view>
+    <view class="tip-box">
+        <image
+            class="img"
+            src="../../../image/me.jpg"
+            background-size="cover"
+        ></image>
+        <view class="tip">javascipt</view>
+    </view>
+    <view class="issue">
+    	前端技术日新月异，三大框架盛行的年代，正是web developer 大展宏图的好时期。选择何种框架，要根据公司实际业务。比如我现在公司是做企业后台，业务逻辑复杂，客户对表格的要求很高，这种情况下，使用react会比较合适，特别是基于react和redux的最佳实践dva框架，体验非常好！但是像之前上海的公司，只涉及微信商城构建，主要难点是订单流，业务不算复杂，这种情况下，使用vue会更加合适。轻量、高效，上手快，是小公司的绝佳选择。 　
+    </view>
+    <view class="line"></view>
+    <view class="solve">
+    	<view class="solve-title">
+            <view><i>|</i><span>解决方案</span></view>
+        </view>
+    	<view class="solve-content">
+    		前端技术日新月异，三大框架盛行的年代，正是web developer 大展宏图的好时期。选择何种框架，要根据公司实际业务。比如我现在公司是做企业后台，业务逻辑复杂，客户对表格的要求很高，这种情况下，使用react会比较合适，特别是基于react和redux的最佳实践dva框架，体验非常好！但是像之前上海的公司，只涉及微信商城构建，主要难点是订单流，业务不算复杂，这种情况下，使用vue会更加合适。轻量、高效，上手快，是小公司的绝佳选择。 
+    	</view>
+    </view>
+
+    <view class="line"></view>
+
+    <view class="comment">
+    	<view class="comment-title">
+            <view><i>|</i><span>评论列表</span></view>
+        </view>
+    	<view class="comment-list">
+    		<view class="comment-item">
+    			<image
+		            class="comment-img"
+		            src="../../../image/me.jpg"
+		            background-size="cover"
+		        ></image>
+		        <view class="comment-main">
+		        	<view class="comment-name">suifeng</view>
+		        	<view class="comment-content">
+		        		前端技术日新月异，三大框架盛行的年代，正是web developer 大展宏图的好时期。选择何种框架，要根据公司实际业务。比如我现在公司是做企业后台，业务逻辑复杂
+		        	</view>
+		        	<view class="comment-tips">
+		        		1小时前
+		        	</view>
+		        </view>
+    		</view>
+    		<view class="comment-item">
+    			<image
+		            class="comment-img"
+		            src="../../../image/me.jpg"
+		            background-size="cover"
+		        ></image>
+		        <view class="comment-main">
+		        	<view class="comment-name">suifeng</view>
+		        	<view class="comment-content">
+		        		前端技术日新月异，三大框架盛行的年代，正是web developer 大展宏图的好时期。选择何种框架，要根据公司实际业务。比如我现在公司是做企业后台，业务逻辑复杂
+		        	</view>
+		        	<view class="comment-tips">
+		        		1小时前
+		        	</view>
+		        </view>
+    		</view>
+    		<view class="comment-item">
+    			<image
+		            class="comment-img"
+		            src="../../../image/me.jpg"
+		            background-size="cover"
+		        ></image>
+		        <view class="comment-main">
+		        	<view class="comment-name">suifeng</view>
+		        	<view class="comment-content">
+		        		前端技术日新月异，三大框架盛行的年代，正是web developer 大展宏图的好时期。选择何种框架，要根据公司实际业务。比如我现在公司是做企业后台，业务逻辑复杂
+		        	</view>
+		        	<view class="comment-tips">
+		        		1小时前
+		        	</view>
+		        </view>
+    		</view>
+    	</view>
+    	<view class="tabbar">
+    		<view class="tabbar-icon">
+    			<view class="tabbar-icon-left tabbar-icon-item">
+    				<i class="iconfont icon-dianzan active"></i>
+    			</view>
+    			<view class="tabbar-icon-rightn tabbar-icon-item">
+    				<i class="iconfont icon-pinglun2"></i>
+    			</view>
+    		</view>
+    		<view class="tabbar-text">
+    			喜欢5<i>.</i>评论2
+    		</view>
+    	</view>
+    </view>
+    
+
 </view>

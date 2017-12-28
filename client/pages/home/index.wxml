@@ -163,40 +163,41 @@
         <view class="month">
             <view class="border-bottom month-title">{{month-1}}月</view>
             <view class="month-item">
-                <navigator 
-                    url="../schedule/detail/index" 
+                <view 
                     wx:for="{{lastMonthList}}" 
                     wx:key="unique" 
                     class="month-item-box"
                 >
-                    <view wx:if="{{item}}" class="num">{{item}}</view>
-                </navigator>
+                    <navigator url="../schedule/detail/index?year={{year}}&month={{month-1}}&day={{item}}"  wx:if="{{item}}" class="num">{{item}}</navigator>
+                </view>
             </view>
         </view>
         <view class="month">
             <view class="border-bottom month-title">{{month}}月</view>
             <view class="month-item">
-                <navigator 
-                    url="../schedule/detail/index" 
+                <view 
+                    url="'../schedule/detail/index?year=' + {{year}} + '&month=' + {{month}} + '&day=' + {{day}}" 
                     wx:for="{{currentMonthList}}" 
                     wx:key="unique" 
                     class="month-item-box"
                 >
-                    <view wx:if="{{item && item != ''}}" class="num {{item == day ? 'on' : ''}}">{{item}}</view>
-                </navigator>
+                    <navigator 
+                        url="../schedule/detail/index?year={{year}}&month={{month}}&day={{item}}" 
+                        wx:if="{{item && item != ''}}" class="num {{item == day ? 'on' : ''}}">{{item}}</navigator>
+                </view>
             </view>
         </view>
         <view class="month">
             <view class="border-bottom month-title">{{month -12 >= 0 ? month - 11 : month + 1}}月</view>
             <view class="month-item">
-                <navigator 
-                    url="../schedule/detail/index"
+                <view 
+                    url="'../schedule/detail/index?year=' + {{year}} + '&month=' + {{month+1}} + '&day=' + {{day}}" 
                     wx:for="{{nextMonthList}}" 
                     wx:key="unique" 
                     class="month-item-box"
                 >
-                    <view wx:if="{{item}}" class="num">{{item}}</view>
-                </navigator>
+                    <navigator url="../schedule/detail/index?year={{month -12 >= 0 ? year + 1 : year}}&month={{month -12 >= 0 ? month - 11 : month + 1}}&day={{item}}"  wx:if="{{item}}" class="num">{{item}}</navigator> 
+                </view>
             </view>
         </view>
     </scroll-view>
@@ -246,7 +247,7 @@
             <view class="issue-line"></view>
         </view>
         <view class="issue-list">
-            <view class="issue-item">   
+            <navigator url="../issue/detail/index" class="issue-item">   
                 <view class="issue-item-header">
                     <view class="issue-item-header-left">
                         <image
@@ -263,7 +264,7 @@
                     </view>
                 </view>
                 <view class="issue-item-title">
-                    深入Weex系列（九）可借鉴细节总结
+                    深入Weex系列（九）可借鉴细节总结深入Weex系列（九）可借鉴细节总结深入Weex系列（九）可借鉴细节总结
                 </view>
                 <view class="issue-item-content">
                     前端技术日新月异，三大框架盛行的年代，正是web developer 大展宏图的好时期。选择何种框架，要根据公司实际业务。比如我现在公司是做企业后台，业务逻辑复杂，客户对表格的要求很高，这种情况下，使用react会比较合适，特别是基于react和redux的最佳实践dva框架，体验非常好！但是像之前上海的公司，只涉及微信商城构建，主要难点是订单流，业务不算复杂，这种情况下，使用vue会更加合适。轻量、高效，上手快，是小公司的绝佳选择。 　　 　　
@@ -273,7 +274,7 @@
                     <i class="iconfont icon-pinglun"></i>评论
                 </view>
                 <view class="issue-line"></view>
-            </view>
+            </navigator>
             <view class="issue-item">   
                 <view class="issue-item-header">
                     <view class="issue-item-header-left">
@@ -291,7 +292,7 @@
                     </view>
                 </view>
                 <view class="issue-item-title">
-                    深入Weex系列（九）可借鉴细节总结
+                    深入Weex系列（九）可借鉴细节总结深入Weex系列（九）可借鉴细节总结深入Weex系列（九）可借鉴细节总结
                 </view>
                 <view class="issue-item-content">
                     前端技术日新月异，三大框架盛行的年代，正是web developer 大展宏图的好时期。选择何种框架，要根据公司实际业务。比如我现在公司是做企业后台，业务逻辑复杂，客户对表格的要求很高，这种情况下，使用react会比较合适，特别是基于react和redux的最佳实践dva框架，体验非常好！但是像之前上海的公司，只涉及微信商城构建，主要难点是订单流，业务不算复杂，这种情况下，使用vue会更加合适。轻量、高效，上手快，是小公司的绝佳选择。 　　 　　

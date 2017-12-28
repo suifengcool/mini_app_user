@@ -5,15 +5,25 @@
 			<i class="iconfont icon-title"></i>
 		</view>
 		<input placeholder="标题"/>
+		<view class="btn">发布</view>
 	</view>
 	<view class="content-box item">
 		<i class="iconfont icon-yiwen"></i>
 		<textarea placeholder-style="font-size:12pt" placeholder="此刻你的疑问..." name="textarea"/>
+		<view class="tip">最多140字</view>
 	</view>
 	<view class="type-box">
 		<view class="type-box-title">
 			<i class="iconfont icon-fenlei"></i>
 			选择分类
+		</view>
+		<view class="type-tab-list">
+			<view class="type-tab-item active">javascript</view>
+			<view class="type-tab-item">css</view>
+			<view class="type-tab-item">html</view>
+			<view class="type-tab-item">vue</view>
+			<view class="type-tab-item">react</view>
+			<view class="type-tab-item">webpack</view>
 		</view>
 		
 	</view>

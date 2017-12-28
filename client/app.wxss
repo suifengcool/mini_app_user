@@ -1,11 +1,11 @@
 /**app.wxss**/
 @font-face {
   font-family: 'iconfont';  /* project id 502865 */
-  src: url('//at.alicdn.com/t/font_502865_bl6ap3kylb0ara4i.eot');
-  src: url('//at.alicdn.com/t/font_502865_bl6ap3kylb0ara4i.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_502865_bl6ap3kylb0ara4i.woff') format('woff'),
-  url('//at.alicdn.com/t/font_502865_bl6ap3kylb0ara4i.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_502865_bl6ap3kylb0ara4i.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_502865_tw3uvnci46qx5hfr.eot');
+  src: url('//at.alicdn.com/t/font_502865_tw3uvnci46qx5hfr.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_502865_tw3uvnci46qx5hfr.woff') format('woff'),
+  url('//at.alicdn.com/t/font_502865_tw3uvnci46qx5hfr.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_502865_tw3uvnci46qx5hfr.svg#iconfont') format('svg');
 }
 .iconfont {
   font-family:"iconfont" !important;
@@ -83,6 +83,7 @@
 
 .icon-aixin2:before{content: '\e623';}
 .icon-pinglun:before{content: '\e689';}
+.icon-pinglun2:before{content: '\e65c';}
 
 .container {
   display: flex;
