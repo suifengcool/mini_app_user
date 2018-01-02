@@ -57,15 +57,27 @@ Page({
             })
             return
         }
-        this.setData({
-            editContent: e.detail.value.textarea
-        })
-        wx.showToast({  
-            title: '提交成功',  
-            icon: 'success',  
-            duration: 2000,
-            complete: this.create(1)
-        })   
+        wx.request({
+            url: config.service.getJoke,
+            method: 'post',
+            data: e.detail.value.textarea,
+            success(result) {
+                this.setData({
+                    editContent: e.detail.value.textarea
+                })
+                wx.showToast({  
+                    title: '提交成功',  
+                    icon: 'success',  
+                    duration: 2000,
+                    complete: this.create(1)
+                }) 
+            },
+
+            fail(error) {
+                util.showModel('提交失败', error)
+            }
+        });
+          
     },
 
 
