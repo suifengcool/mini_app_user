@@ -35,4 +35,8 @@ router.post('/message', controllers.message.post)
 router.get('/get_joke_list', controllers.joke.getList)
 router.post('/update_joke_list', controllers.joke.update)
 
+router.post('/create_schedule', controllers.schedule.create)
+
+
+
 module.exports = router

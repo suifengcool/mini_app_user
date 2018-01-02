@@ -27,7 +27,11 @@ var config = {
         getJoke: `${host}/weapp/get_joke_list`,
 
         // 更新joke列表
-        updateJoke: `${host}/weapp/update_joke_list`
+        updateJoke: `${host}/weapp/update_joke_list`,
+
+        // 新建活动日程
+        createSchedule: `${host}/weapp/create_schedule`,
+
 
     }
 };

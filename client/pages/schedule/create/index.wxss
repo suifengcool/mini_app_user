@@ -98,4 +98,9 @@ page {
     height:90rpx;
     line-height:90rpx;
     border-bottom:0.5rpx solid #dedede;
+    display: flex;
+}
+.time-item-right .picker{
+    margin-left: 10rpx;
+    flex: 1;
 }
