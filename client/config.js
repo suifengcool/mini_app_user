@@ -24,7 +24,10 @@ var config = {
         uploadUrl: `${host}/weapp/upload`,
 
         // 获取joke列表
-        getJoke: `${host}/weapp/get_joke_list`
+        getJoke: `${host}/weapp/get_joke_list`,
+
+        // 更新joke列表
+        updateJoke: `${host}/weapp/update_joke_list`
 
     }
 };

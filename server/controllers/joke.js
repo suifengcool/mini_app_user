@@ -1,14 +1,34 @@
-module.exports = async ctx => {
-    const { mysql } = require('../qcloud')
-    
-    // var data = {
-    //     content: ctx.req
-    // }
+const { mysql } = require('../qcloud')
 
-    // await mysql("joke").insert(data)
+/**
+ * 获取joke列表
+ */
+async function getList (ctx, next) {
     var arr = await mysql('joke').select('*');
 
     ctx.state.data = {
         data: arr
     }
+}
+
+
+/**
+ * 更新joke列表
+ */
+async function update (ctx, next) {
+    var data = {
+        content: ctx.request.body.content,
+        user: ctx.request.body.user
+    }
+
+    await mysql("joke").insert(data)
+
+    ctx.state.data = {
+        data: null
+    }
+}
+
+module.exports = {
+    getList,
+    update
 }

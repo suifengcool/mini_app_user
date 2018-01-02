@@ -5,6 +5,7 @@ var util = require('../../../utils/util.js')
 
 Page({
     data: {
+        userInfo: {},
         jokeList: [],
         joke: '',
         focus: false,
@@ -14,21 +15,28 @@ Page({
     },
 
     onLoad: function() {
-        this.getJokeList();
+        var _this = this;
+        wx.getStorage({
+            key:'userInfo',
+            success: function(res) {
+                _this.getStorage(res)
+            } 
+        })
+        _this.getJokeList();
+
     },
 
-    getJokeList(){
+    getJokeList(value){
         var that = this;
         wx.request({
             url: config.service.getJoke,
             method: 'get',
             success(result) {
                 that.setData({
-                    jokeList: result.data.data.data
+                    jokeList: result.data.data.data,
+                    joke: value ? value : result.data.data.data[Math.floor(Math.random() *(result.data.data.data.length-1))].content
                 })
-                that.change();
             },
-
             fail(error) {
                 util.showModel('获取joke列表失败', error)
             }
@@ -37,7 +45,7 @@ Page({
 
     change (){
         this.setData({
-            joke: this.data.jokeList[Math.floor(Math.random() *(this.data.jokeList.length-1))].content
+            joke:this.data.jokeList[Math.floor(Math.random() *(this.data.jokeList.length-1))].content
         })
     },
 
@@ -50,6 +58,7 @@ Page({
     },
 
     submitJoke(e) {
+        var that = this;
         if(!(e.detail.value.textarea).trim()){
             wx.showModal({
                 title: '空空如也，如何提交~', 
@@ -58,18 +67,20 @@ Page({
             return
         }
         wx.request({
-            url: config.service.getJoke,
+            url: config.service.updateJoke,
             method: 'post',
-            data: e.detail.value.textarea,
+            data: {
+                content: e.detail.value.textarea,
+                user: that.data.userInfo.nickName
+            },
             success(result) {
-                this.setData({
-                    editContent: e.detail.value.textarea
-                })
+                var editContent = e.detail.value.textarea;
+                that.getJokeList(editContent);
                 wx.showToast({  
                     title: '提交成功',  
                     icon: 'success',  
                     duration: 2000,
-                    complete: this.create(1)
+                    complete: that.create(1)
                 }) 
             },
 
@@ -79,6 +90,13 @@ Page({
         });
           
     },
+
+    getStorage (res){
+        this.setData({
+            userInfo : res.data
+        })
+    },
+
 
 
 })
