@@ -12,11 +12,19 @@ Page({
         today: '',
         event_title: '',
         event_detail: '',
-        adress: ''
+        adress: '',
+        userInfo: {},
 
     },
 
     onLoad: function(){
+        var _this = this;
+        wx.getStorage({
+            key:'userInfo',
+            success: function(res) {
+                _this.getStorage(res)
+            } 
+        })
 		var date = new Date();
         var today = date.getFullYear() + '年' + (date.getMonth() + 1) + '月' + date.getDate() + '日'
         this.setData({
@@ -63,6 +71,12 @@ Page({
         })
     },
 
+    getStorage (res){
+        this.setData({
+            userInfo : res.data
+        })
+    },
+
     publish() {
         if(!(this.data.event_title).trim()){
             wx.showModal({
@@ -94,7 +108,8 @@ Page({
                 date: this.data.date,
                 adress: this.data.adress,
                 event_detail: this.data.event_detail,
-                event_title: this.data.event_title
+                event_title: this.data.event_title,
+                user: this.data.userInfo.nickName
             },
             success(result) {
                 
