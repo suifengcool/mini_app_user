@@ -32,6 +32,7 @@ Page({
 			day: options.day
 		})
 		this.fetchDayList()
+        this.fetchEventList()
     },
 
     chooseDay(e){
@@ -77,4 +78,22 @@ Page({
         arr = newArr
         return arr
     },
+
+    // 获取当日
+    fetchEventList(){
+        wx.request({
+            url: config.service.getScheduleListByDay,
+            method: 'post',
+            data: {
+                date: this.data.year + '年0' + this.data.month + '月0' + this.data.day + '日'
+            },
+            success(result) {
+                console.log('result:',result)
+            },
+
+            fail(error) {
+                util.showModel('提交失败', error)
+            }
+        });
+    }
 })

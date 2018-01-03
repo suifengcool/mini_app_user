@@ -9,6 +9,7 @@ async function create (ctx, next) {
         user: ctx.request.body.user,
         end_time: ctx.request.body.end_time,
         date: ctx.request.body.date,
+        month: ctx.request.body.month,
         adress: ctx.request.body.adress,
         event_detail: ctx.request.body.event_detail,
         event_title: ctx.request.body.event_title
@@ -24,11 +25,22 @@ async function create (ctx, next) {
 
 
 /**
- * 更新joke列表
+ * 获取列表
  */
-async function getList (ctx, next) {
-    
-    var arr = await mysql("joke").select('*')
+async function getScheduleListByMonth (ctx, next) {
+    var arr = await mysql("schedule").where({month: ctx.request.body.month})
+
+    ctx.state.data = {
+        data: arr
+    }
+}
+
+/**
+ * 获取列表
+ */
+async function getScheduleListByDay (ctx, next) {
+    var date = ctx.request.body.date
+    var arr = await mysql("schedule").where({date});
 
     ctx.state.data = {
         data: arr
@@ -36,6 +48,7 @@ async function getList (ctx, next) {
 }
 
 module.exports = {
-    getList,
+    getScheduleListByMonth,
+    getScheduleListByDay,
     create
 }

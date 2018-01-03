@@ -32,7 +32,9 @@ var config = {
         // 新建活动日程
         createSchedule: `${host}/weapp/create_schedule`,
 
-
+        // 获取日程列表
+        getScheduleListByMonth: `${host}/weapp/get_schedule_list_by_month`,
+        getScheduleListByDay: `${host}/weapp/get_schedule_list_by_day`
     }
 };
 

@@ -36,6 +36,8 @@ router.get('/get_joke_list', controllers.joke.getList)
 router.post('/update_joke_list', controllers.joke.update)
 
 router.post('/create_schedule', controllers.schedule.create)
+router.post('/get_schedule_list_by_month', controllers.schedule.getScheduleListByMonth)
+router.post('/get_schedule_list_by_day', controllers.schedule.getScheduleListByDay)
 
 
 

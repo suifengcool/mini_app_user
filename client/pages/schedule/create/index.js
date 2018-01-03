@@ -14,6 +14,7 @@ Page({
         event_detail: '',
         adress: '',
         userInfo: {},
+        month: ''
 
     },
 
@@ -48,7 +49,8 @@ Page({
     bindDateChange: function(e) {
         var date = e.detail.value
 	    this.setData({
-	        date: date.split('-')[0] + '年' + date.split('-')[1] + '月' + date.split('-')[2] + '日'
+	        date: date.split('-')[0] + '年' + date.split('-')[1] + '月' + date.split('-')[2] + '日',
+            month: date.split('-')[0] + '-' + date.split('-')[1]
 	    })
 	},
 
@@ -109,7 +111,8 @@ Page({
                 adress: this.data.adress,
                 event_detail: this.data.event_detail,
                 event_title: this.data.event_title,
-                user: this.data.userInfo.nickName
+                user: this.data.userInfo.nickName,
+                month: this.data.month
             },
             success(result) {
                 
@@ -125,11 +128,5 @@ Page({
                 util.showModel('提交失败', error)
             }
         });
-        console.log('start_time:',this.data.start_time)
-        console.log('end_time:',this.data.end_time)
-        console.log('date:',this.data.date)
-        console.log('adress:',this.data.adress)
-        console.log('event_detail:',this.data.event_detail)
-        console.log('event_title:',this.data.event_title)
     }
 })
