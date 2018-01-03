@@ -79,7 +79,14 @@ Page({
         })
     },
 
+    goLastStep(){
+        wx.redirectTo({
+            url: '../../home/index'
+        })
+    },
+
     publish() {
+        var that = this;
         if(!(this.data.event_title).trim()){
             wx.showModal({
                 title: '请填写活动标题', 
@@ -117,10 +124,10 @@ Page({
             success(result) {
                 
                 wx.showToast({  
-                    title: '新建成功',  
+                    title: '新建成功,回到首页',  
                     icon: 'success',  
-                    duration: 2000,
-                    // complete: that.create(1)
+                    duration: 3000,
+                    complete: that.goLastStep()
                 }) 
             },
 

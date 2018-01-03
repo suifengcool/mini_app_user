@@ -139,10 +139,17 @@ Page({
             },
             success(result) {
                 var arr = result.data.data.data;
-                var rst = [], eventList = [];
+                var rst = [], eventList = [], monthList = [];
+                if(type === 0){
+                    monthList = _this.data.currentMonthList
+                }else if(type === -1){
+                    monthList = _this.data.lastMonthList
+                }else if(type === 1){
+                    monthList = _this.data.nextMonthList
+                }
 
-                if((result.data.data.data).length){
-                    _this.data.currentMonthList.forEach(function(ele, i){
+                monthList.forEach(function(ele, i){
+                    if(result.data.data.data.length){
                         (result.data.data.data).forEach(function(item, index){
                             if(Number(item.date.split('月')[1].substring(0,2)) == ele){
                                 eventList.push({
@@ -159,8 +166,14 @@ Page({
                                 })
                             }
                         })
-                    });
-
+                    }else{
+                        rst.push({
+                            day: ele,
+                            event: []
+                        })
+                    }
+                });
+                if(result.data.data.data.length){
                     // 去重
                     if(rst.length ==2){
                         for (var i = 0;i<rst.length;i++) {
@@ -180,16 +193,20 @@ Page({
                         }
                     }
                 }
+                
 
                 if(type === 0){
+                    console.log('rst1:',rst)
                     _this.setData({
                         currentMonthEventList: rst
                     })
                 }else if(type === -1){
+                    console.log('rst2:',rst)
                     _this.setData({
                         lastMonthEventList: rst
                     })
                 }else if(type === 1){
+                    console.log('rst3:',rst)
                     _this.setData({
                         nextMonthEventList: rst
                     })

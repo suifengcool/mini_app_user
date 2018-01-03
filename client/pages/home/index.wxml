@@ -164,11 +164,17 @@
             <view class="border-bottom month-title">{{month-1 == 0 ? '12' : month-1}}月</view>
             <view class="month-item">
                 <view 
-                    wx:for="{{lastMonthList}}" 
+                    wx:for="{{lastMonthEventList}}" 
                     wx:key="unique" 
                     class="month-item-box"
                 >
-                    <navigator url="../schedule/detail/index?year={{year}}&month={{month-1}}&day={{item.day}}"  wx:if="{{item}}" class="num">{{item}}</navigator>
+                    <navigator 
+                        url="../schedule/detail/index?year={{year}}&month={{month-1 == 0 ? '12' : month -1}}&day={{item.day}}"  
+                        wx:if="{{item.day && item.day != ''}}"
+                        class="num"
+                    >
+                        {{item.day}}
+                    </navigator>
                 </view>
             </view>
         </view>
@@ -185,7 +191,7 @@
                         wx:if="{{item.day && item.day != ''}}" class="num"
                     >
                         <view class="num-item {{item.day == day ? 'on' : ''}}">{{item.day}}</view>
-                        <view wx:if="{{item.event && item.event.length > 0}}" class="event-list">
+                        <view wx:if="{{item.event && item.event.length != 0}}" class="event-list">
                             <image
                                 class="point-img"
                                 src="../../image/point.png"
@@ -200,11 +206,17 @@
             <view class="border-bottom month-title">{{month -12 >= 0 ? month - 11 : month + 1}}月</view>
             <view class="month-item">
                 <view 
-                    wx:for="{{nextMonthList}}" 
+                    wx:for="{{nextMonthEventList}}" 
                     wx:key="unique" 
                     class="month-item-box"
                 >
-                    <navigator url="../schedule/detail/index?year={{month -12 >= 0 ? year + 1 : year}}&month={{month -12 >= 0 ? month - 11 : month + 1}}&day={{item.day}}"  wx:if="{{item}}" class="num">{{item}}</navigator> 
+                    <navigator 
+                        url="../schedule/detail/index?year={{month -12 >= 0 ? year + 1 : year}}&month={{month -12 >= 0 ? month - 11 : month + 1}}&day={{item.day}}"  
+                        wx:if="{{item.day && item.day != ''}}"
+                        class="num"
+                    >
+                        {{item.day}}
+                    </navigator> 
                 </view>
             </view>
         </view>
