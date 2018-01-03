@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container">
     <!-- 首页 -->
-    <scroll-view scroll-y='true' style="height: 2850rpx;" class="container-home" hidden="{{currentTab != 0}}">
+    <view class="container-home" hidden="{{currentTab != 0}}">
     	<!--banner-->
         <view class="banner">
         	<image
@@ -152,23 +152,23 @@
                 <view>技术博客：https://suifengcool.github.io</view>
             </view>
 	    </view>
-    </scroll-view>
+    </view>
 
 
     <!-- 日程 -->
-    <scroll-view scroll-y='true' style="height: 1680rpx;" class="container-schedule" hidden="{{currentTab != 1}}">
+    <view class="container-schedule" hidden="{{currentTab != 1}}">
         <view class="week-box">
             <text class="week-item" wx:for="{{weekList}}" wx:key="unique">{{item}}</text>
         </view>
         <view class="month">
-            <view class="border-bottom month-title">{{month-1}}月</view>
+            <view class="border-bottom month-title">{{month-1 == 0 ? '12' : month-1}}月</view>
             <view class="month-item">
                 <view 
                     wx:for="{{lastMonthList}}" 
                     wx:key="unique" 
                     class="month-item-box"
                 >
-                    <navigator url="../schedule/detail/index?year={{year}}&month={{month-1}}&day={{item}}"  wx:if="{{item}}" class="num">{{item}}</navigator>
+                    <navigator url="../schedule/detail/index?year={{year}}&month={{month-1}}&day={{item.day}}"  wx:if="{{item}}" class="num">{{item}}</navigator>
                 </view>
             </view>
         </view>
@@ -176,14 +176,23 @@
             <view class="border-bottom month-title">{{month}}月</view>
             <view class="month-item">
                 <view 
-                    url="'../schedule/detail/index?year=' + {{year}} + '&month=' + {{month}} + '&day=' + {{day}}" 
-                    wx:for="{{currentMonthList}}" 
+                    wx:for="{{currentMonthEventList}}" 
                     wx:key="unique" 
                     class="month-item-box"
                 >
                     <navigator 
-                        url="../schedule/detail/index?year={{year}}&month={{month}}&day={{item}}" 
-                        wx:if="{{item && item != ''}}" class="num {{item == day ? 'on' : ''}}">{{item}}</navigator>
+                        url="../schedule/detail/index?year={{year}}&month={{month}}&day={{item.day}}" 
+                        wx:if="{{item.day && item.day != ''}}" class="num"
+                    >
+                        <view class="num-item {{item.day == day ? 'on' : ''}}">{{item.day}}</view>
+                        <view wx:if="{{item.event && item.event.length > 0}}" class="event-list">
+                            <image
+                                class="point-img"
+                                src="../../image/point.png"
+                                background-size="cover"
+                            ></image>
+                        </view>
+                    </navigator>
                 </view>
             </view>
         </view>
@@ -191,20 +200,19 @@
             <view class="border-bottom month-title">{{month -12 >= 0 ? month - 11 : month + 1}}月</view>
             <view class="month-item">
                 <view 
-                    url="'../schedule/detail/index?year=' + {{year}} + '&month=' + {{month+1}} + '&day=' + {{day}}" 
                     wx:for="{{nextMonthList}}" 
                     wx:key="unique" 
                     class="month-item-box"
                 >
-                    <navigator url="../schedule/detail/index?year={{month -12 >= 0 ? year + 1 : year}}&month={{month -12 >= 0 ? month - 11 : month + 1}}&day={{item}}"  wx:if="{{item}}" class="num">{{item}}</navigator> 
+                    <navigator url="../schedule/detail/index?year={{month -12 >= 0 ? year + 1 : year}}&month={{month -12 >= 0 ? month - 11 : month + 1}}&day={{item.day}}"  wx:if="{{item}}" class="num">{{item}}</navigator> 
                 </view>
             </view>
         </view>
-    </scroll-view>
+    </view>
 
 
     <!-- 问答 -->
-    <scroll-view scroll-y='true' style="height: 1680rpx;" class="container-issuse" hidden="{{currentTab != 2}}">
+    <view class="container-issuse" hidden="{{currentTab != 2}}">
         <view class="hot-box">
             <view class="hot-head">
                 <view class="hot-head-title-left">
@@ -306,7 +314,7 @@
         </view>
 
         <navigator url="../issue/create/index"><i class="iconfont icon-jiahao3"></i></navigator>
-    </scroll-view>
+    </view>
 
 
     <!-- 我的 -->

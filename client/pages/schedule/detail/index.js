@@ -10,36 +10,30 @@ Page({
         dayList: [],                                           // 日期池
         year: '',                                              // 当前年
         month: '',                                             // 当前月
-        day: '',                                               // 当前日
+        day: '',                                               // 选中日
+        today: '',                                             // 当前日
         chooseDay: '',                                         // 选中日
         WeekDay: '1',                                          // 当前日期是本周几
-        eventList:[{
-            title: '圣诞节',
-            content: '要去逛街，买衣服，好多事情哦，要去逛街，买衣服，好多事情哦，要去逛街，买衣服，好多事情哦，要去逛街，买衣服，好多事情哦'
-        },{
-            title: '圣诞节',
-            content: '要去逛街，买衣服，好多事情哦，要去逛街，买衣服，好多事情哦，要去逛街，买衣服，好多事情哦，要去逛街，买衣服，好多事情哦'
-        },{
-            title: '圣诞节',
-            content: '要去逛街，买衣服，好多事情哦，要去逛街，买衣服，好多事情哦，要去逛街，买衣服，好多事情哦，要去逛街，买衣服，好多事情哦'
-        }]
+        eventList:[]                                           // 事件池
     },
 
     onLoad: function(options){
 		this.setData({
 			year: options.year,
 			month: options.month,
-			day: options.day
+			day: options.day,
+            today: options.day
 		})
 		this.fetchDayList()
         this.fetchEventList()
     },
 
     chooseDay(e){
-        console.log('e:',e.currentTarget.dataset.choosed)
         this.setData({
-            chooseDay: e.currentTarget.dataset.choosed
+            chooseDay: e.currentTarget.dataset.choosed,
+            day: e.currentTarget.dataset.choosed
         })
+        this.fetchEventList()
         
     },
 
@@ -79,16 +73,26 @@ Page({
         return arr
     },
 
-    // 获取当日
+    // 获取当日事件
     fetchEventList(){
+        var _this = this;
+        var date = 
+            this.data.year 
+            + ((this.data.month).length > 1 ? '年' : '年0') 
+            + this.data.month 
+            + ((this.data.day).length > 1 ? '月' : '月0')
+            + this.data.day + '日';
         wx.request({
             url: config.service.getScheduleListByDay,
             method: 'post',
             data: {
-                date: this.data.year + '年0' + this.data.month + '月0' + this.data.day + '日'
+                date: date
             },
             success(result) {
                 console.log('result:',result)
+                _this.setData({
+                    eventList: result.data.data.data
+                })
             },
 
             fail(error) {

@@ -6,7 +6,7 @@
         </view> 
         <view class="day" wx:for="{{dayList}}" wx:key="unique">       
 	        <view 
-                class="{{chooseDay == item ? 'choosed' : ''}} day-num {{ item == day ? 'active' : ''}}" 
+                class="{{chooseDay == item ? 'choosed' : ''}} day-num {{ item == today ? 'active' : ''}}" 
                 bindtap="chooseDay" 
                 data-choosed="{{item}}"
             >
@@ -20,9 +20,17 @@
     </view>
     <view class="event-list" wx:for="{{eventList}}" wx:key="unique">
         <view class="event-item">
-            <view class="title">{{item.title}}</view>
-            <view class="content">{{item.content}}</view>
+            <view class="title">{{item.event_title}}</view>
+            <view class="content">{{item.event_detail}}</view>
         </view>
+    </view>
+    <view wx:if="{{eventList.length <= 0}}" class="eventNone">
+        <image
+            class="none-img"
+            src="../../../image/nostatus.png"
+            background-size="cover"
+        ></image>
+        <view class="text">还没有日程哦~</view>
     </view>
     <navigator url="../create/index" class="create">
         <i class="iconfont icon-jiahao1"></i>新建日程活动

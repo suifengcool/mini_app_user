@@ -133,6 +133,7 @@ page {
 }
 .container-home, .container-user, .container-schedule, .container-issuse{
     width: 100%;
+    margin-bottom: 100rpx;
 }
 .container-schedule{
     padding-top: 50rpx;
@@ -145,6 +146,7 @@ page {
     left: 0;
     top: 0;
     width: 100%;
+    z-index: 100;
 }
 .week-item{
     display: inline-block;
@@ -155,8 +157,7 @@ page {
 }
 .month{
     background: #fff;
-}
-    
+}    
 .month-title{ 
     font-weight: 300;
     font-family: PingFangSC-Medium;
@@ -183,17 +184,33 @@ page {
     font-size: 1.3rem;
     line-height: 1.7rem;
     margin-top: .25rem;
-    width: 1.7rem;
-    height: 1.7rem;
-    border-radius: 50%;
     color: #000;
+    height: 80rpx;
+    position: relative;
+}
+.num-item{
+    width: 1.7rem;
+    border-radius: 50%;
     margin: 0 auto;
 }
 .on{
     background: #FD834B;
     color: #fff;
 }
-
+.event-list{
+    width: 100%;
+    overflow: hidden;
+    line-height: 10rpx;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+.point-img{
+    width: 85%;
+    height: 20rpx;
+}
 .container-user-header{
     width: 100%;
     height: 400rpx;
@@ -441,4 +458,3 @@ page {
     font-size:28pt;
     color:#03ca9d;
 }
-

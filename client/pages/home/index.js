@@ -7,14 +7,14 @@ var util = require('../../utils/util.js')
 Page({
     data: {
         userInfo: {},
-        currentTab: 0, 
+        currentTab: 0,                                   // 底部当前tab
         weekList: ['一','二','三','四','五','六','日'],    // 星期池
         lastMonthList: [],                               // 上月日期池
         currentMonthList: [],                            // 当月日期池
         nextMonthList: [],                               // 下月日期池
-        lastEventList: [],                               // 上月月事件池
-        currentEventList: [],                            // 当月事件池
-        nextEventList: [],                               // 下月事件池
+        lastMonthEventList: [],                          // 上月月事件池
+        currentMonthEventList: [],                       // 当月事件池
+        nextMonthEventList: [],                          // 下月事件池
         year: '',
         month: '',
         day: '' 
@@ -59,6 +59,10 @@ Page({
         this.fetchMonthData(year , month ,0)            // 获取本月日历
         this.fetchMonthData(year , month -1,-1)         // 获取上月日历
         this.fetchMonthData(year , month +1,1)          // 获取下月日历
+
+        this.fetchEventData(year, month, 0)             // 获取本月日历
+        this.fetchEventData(year, month-1, -1)          // 获取上月日历
+        this.fetchEventData(year, month+1, 1)           // 获取下月日历
     },
 
     fetchMonthData(year, month ,type) {
@@ -124,4 +128,77 @@ Page({
         	})
         }
     },
+
+    fetchEventData(year, month, type){
+        var _this = this;
+        wx.request({
+            url: config.service.getScheduleListByMonth,
+            method: 'post',
+            data: {
+                month: year + ((month.length) > 1 ? '-' : '-0') + month
+            },
+            success(result) {
+                var arr = result.data.data.data;
+                var rst = [], eventList = [];
+
+                if((result.data.data.data).length){
+                    _this.data.currentMonthList.forEach(function(ele, i){
+                        (result.data.data.data).forEach(function(item, index){
+                            if(Number(item.date.split('月')[1].substring(0,2)) == ele){
+                                eventList.push({
+                                    event: item.event_title
+                                })
+                                rst.push({
+                                    day: ele,
+                                    event: eventList
+                                })
+                            }else{
+                                rst.push({
+                                    day: ele,
+                                    event: []
+                                })
+                            }
+                        })
+                    });
+
+                    // 去重
+                    if(rst.length ==2){
+                        for (var i = 0;i<rst.length;i++) {
+                            for (var j =1;j<rst.length;j++) {
+                                if(rst[i].day == rst[j].day){
+                                    rst.splice(j,1)
+                                }
+                            }
+                        }
+                    }else{
+                        for (var i = 0;i<rst.length;i++) {
+                            for (var j =1;j<rst.length-1;j++) {
+                                if(rst[i].day == rst[j].day){
+                                    rst.splice(j,1)
+                                }
+                            }
+                        }
+                    }
+                }
+
+                if(type === 0){
+                    _this.setData({
+                        currentMonthEventList: rst
+                    })
+                }else if(type === -1){
+                    _this.setData({
+                        lastMonthEventList: rst
+                    })
+                }else if(type === 1){
+                    _this.setData({
+                        nextMonthEventList: rst
+                    })
+                }
+            },
+
+            fail(error) {
+                util.showModel('获取失败', error)
+            }
+        });
+    }
 })

@@ -80,3 +80,18 @@ page {
     margin-right: 20rpx;
     font-size: 12pt;
 }
+.eventNone{
+    width:60%;
+    text-align: center;
+    margin-top:20%;
+}
+.eventNone .none-img{
+    width: 60%;
+    height: 280rpx;
+}
+.eventNone .text{
+    text-align:center;
+    font-size:11pt;
+    color:#979797;
+    margin-top:10rpx;
+}
