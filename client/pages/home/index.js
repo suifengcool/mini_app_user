@@ -166,6 +166,25 @@ Page({
                                 })
                             }
                         })
+
+                        if(rst.length ==2){
+                            for (var i = 0;i<rst.length;i++) {
+                                for (var j =1;j<rst.length;j++) {
+                                    if(rst[i].day == rst[j].day){
+                                        rst.splice(j,1)
+                                    }
+                                }
+                            }
+                        }else{
+                            for (var i = 0;i<rst.length;i++) {
+                                for (var j =1;j<rst.length-1;j++) {
+                                    if(rst[i].day == rst[j].day){
+                                        rst.splice(j,1)
+                                    }
+                                }
+                            }
+                        }
+
                     }else{
                         rst.push({
                             day: ele,
@@ -173,6 +192,7 @@ Page({
                         })
                     }
                 });
+                debug;
                 if(result.data.data.data.length){
                     // 去重
                     if(rst.length ==2){
