@@ -192,7 +192,6 @@ Page({
                         })
                     }
                 });
-                debug;
                 if(result.data.data.data.length){
                     // 去重
                     if(rst.length ==2){
