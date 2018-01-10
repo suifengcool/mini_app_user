@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="container">
+<view class="container container-project-detail">
 	<view class="header">
 		<image
             class="header-img"
@@ -7,14 +7,11 @@
             background-size="cover"
         ></image>
         <view class="header-desc">
-        	<view class="header-desc-name">店族</view>
-        	<view class="header-desc-type">微信公众号</view>
+        	<view class="header-desc-name">{{projectDeail.name}}</view>
+        	<view class="header-desc-type">{{projectDeail.type}}</view>
         	<view class="header-desc-score">分数</view>
         	<view class="header-desc-skills">
-        		<view class="header-desc-skills-item">VueJS</view>
-        		<view class="header-desc-skills-item">NodeJS</view>
-        		<view class="header-desc-skills-item">Sass</view>
-        		<view class="header-desc-skills-item">Webpack</view>
+        		<view class="header-desc-skills-item" wx:for="{{projectDeail.tools}}" wx:key="{{index}}">{{item}}</view>
         	</view>
     	</view>
 	</view>
@@ -35,18 +32,16 @@
 	    </scroll-view>
 
 	    <view class="desc">
-	    	<view class="desc-text"><i>项目名称</i>店族公众号(门店端)</view>
-	    	<view class="desc-text"><i>开发时间</i>2017.4--2017.7</view>
-	    	<view class="desc-text"><i>技术栈</i>VueJS、ES6、Sass、NodeJS、Webpack、VmUI</view>
+	    	<view class="desc-text"><i>项目名称</i>{{projectDeail.name}}</view>
+	    	<view class="desc-text"><i>开发时间</i>{{projectDeail.time}}</view>
+	    	<view class="desc-text"><i>技术栈</i>{{projectDetail.skills}}</view>
 	    </view>
 
 	    <view class="line"></view>
 
 	    <view class="project-box">
 	    	<view class="title">项目概述</view>
-	    	<view class="content">
-	    		公司是采用线上代理分销和终端用户的运营模式，对应开发产品有大使端(企业号)和用户端(公众号)，里面嵌入公司购物平台，产品逻辑包括用户管理，大使管理，整套电商购物结算流程，大使收益分配。前端采用vue2.0框架，通过flexible和rem布局，通过750px标准设计稿适配所有终端机型。
-	    	</view>
+	    	<view class="content">{{projectDeail.desc}}</view>
 	    </view>
 	</view>
 

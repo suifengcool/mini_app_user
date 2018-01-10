@@ -5,6 +5,9 @@ page {
     flex-direction: column;
     justify-content: flex-start;
 }
+.container-project-list{
+    background: #fff;
+}
 .swiper {
   height: 400rpx;
   width: 100%;
@@ -78,17 +81,17 @@ page {
 	border-bottom: 0.5rpx solid #dedede;
 	display: flex;
 	padding: 10rpx 30rpx;
-	font-size: 10pt;
+	font-size: 9pt;
 }
 .list .img{
-	width: 130rpx;
-	height: 130rpx;
-	border-radius: 50%;
+	width: 120rpx;
+	height: 120rpx;
 	margin-right: 15rpx;
 }
 .list .desc{
 	flex: 1;
-	padding:10rpx 0;
+	padding:8rpx 0;
+    font-size:11px;
 }
 .type-box{
     width: 100%;
@@ -112,5 +115,11 @@ page {
     font-size: 7pt;
     margin-top: 10rpx;
 }
-
+.name{
+    font-size:13px;
+    font-weight:600;
+}
+.time{
+    margin:8rpx 0;
+}
 

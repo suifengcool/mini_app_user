@@ -21,6 +21,43 @@ Page({
     },
 
     changeTab (e) {
+        let tab = e.currentTarget.dataset.tab;
+        let color = '', bg_color = '', title = '';
+        switch (tab){
+            case '0':
+                color = '#000000';
+                bg_color = '#f4f4f4';
+                title = '随风-Web Developer';
+                break;
+            case '1':
+                color = '#000000';
+                bg_color = '#f4f4f4';
+                title = '日程';
+                break;
+            case '2':
+                color = '#ffffff';
+                bg_color = '#55cbc4';
+                title = '问答';
+                break;
+            case '3':
+                color = '#000000';
+                bg_color = '#f4f4f4';
+                title = '我的';
+                break;
+            default:
+                color = '#000000';
+                bg_color = '#f4f4f4';
+                title = '随风-Web Developer';
+        }
+        console.log('bg_color:',bg_color)
+        wx.setNavigationBarColor({
+            frontColor: color,
+            backgroundColor: bg_color
+        })
+        wx.setNavigationBarTitle({
+            title: title
+        })
+
     	this.setData({
             currentTab : e.currentTarget.dataset.tab
         })

@@ -69,24 +69,24 @@
                     <text class="project-skill-detail-item-text">HTML(5)</text>
                 </view>
                 <view class="project-skill-detail-item-box">
+                    <i class="iconfont icon-css" style="color:#2d78f4"></i>
+                    <text class="project-skill-detail-item-text">CSS(3)</text>
+                </view>
+                <view class="project-skill-detail-item-box">
                     <i class="iconfont icon-js" style="color:#136ec2"></i>
                     <text class="project-skill-detail-item-text">JavaScript</text>
                 </view>
                 <view class="project-skill-detail-item-box">
-                    <i class="iconfont icon-webpack" style="color:rgba(16,58,177,.5)"></i>
-                    <text class="project-skill-detail-item-text">Webpack</text>
-                </view>
-                <view class="project-skill-detail-item-box">
-                    <i class="iconfont icon-css" style="color:#2d78f4"></i>
-                    <text class="project-skill-detail-item-text">CSS(3)</text>
+                    <i class="iconfont icon-node" style="color:#43853d"></i>
+                    <text class="project-skill-detail-item-text">NodeJS</text>
                 </view>
                 <view class="project-skill-detail-item-box">
                     <i class="iconfont icon-gulp" style="color:#efbfbf"></i>
                     <text class="project-skill-detail-item-text">Gulp</text>
                 </view>
                 <view class="project-skill-detail-item-box">
-                    <i class="iconfont icon-node" style="color:#43853d"></i>
-                    <text class="project-skill-detail-item-text">NodeJS</text>
+                    <i class="iconfont icon-webpack" style="color:rgba(16,58,177,.5)"></i>
+                    <text class="project-skill-detail-item-text">Webpack</text>
                 </view>
                 <view class="project-skill-detail-item-box">
                     <i class="iconfont icon-react" style="color:#61dafb"></i>
@@ -360,19 +360,19 @@
     <!-- 底部tab -->
     <view class="tab">
         <view class="tab_item {{currentTab == 0 ? ' active' : ''}}" bindtap="changeTab" data-tab="0" >
-            <i class="iconfont icon-shouye iconfont-tab"></i>
+            <i class="iconfont {{currentTab == 0 ? 'icon-shouye2': 'icon-shouye'}} iconfont-tab"></i>
             <text class="title">首页</text>
         </view>
         <view class="tab_item {{currentTab == 1 ? ' active' : ''}}" bindtap="changeTab" data-tab="1" >
-            <i class="iconfont icon-rili2 iconfont-tab"></i>
+            <i class="iconfont {{currentTab == 1 ? ' icon-rili3' : 'icon-rili2'}} iconfont-tab"></i>
             <text class="title">日程</text>
         </view>
         <view class="tab_item {{currentTab == 2 ? ' active' : ''}}" bindtap="changeTab" data-tab="2" >
-            <i class="iconfont icon-wenda2 iconfont-tab"></i>
+            <i class="iconfont {{currentTab == 2 ? ' icon-wenda4' : 'icon-wenda2'}} iconfont-tab"></i>
             <text class="title">问答</text>
         </view>
         <view class="tab_item {{currentTab == 3 ? ' active' : ''}}" bindtap="changeTab" data-tab="3" >
-            <i class="iconfont icon-wode iconfont-tab"></i>
+            <i class="iconfont {{currentTab == 3 ? ' icon-wode2' : 'icon-wode'}} iconfont-tab"></i>
             <text class="title">我的</text>
         </view>
     </view>

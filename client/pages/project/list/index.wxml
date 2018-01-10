@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="container">
+<view class="container container-project-list">
 	<scroll-view scroll-y='true' style="height: 1400rpx;" class="project-box">
 	    <swiper class="swiper" indicator-dots="true" autoplay="true" interval="3000" duration="1000">    
 	        <block wx:for="{{movies}}" wx:key="unique">    
@@ -53,41 +53,17 @@
             </view>
         </view>
 
-        <view class="list-box">
-	        <navigator url="../detail/index?id=1" class="list">
+        <view wx:for="{{projectList}}" wx:key="unique" data-item="{{item}}" class="list-box">
+	        <view class="list" data-detail="{{item}}" bindtap="goDetail">
 	        	<image
 		            class="img"
-		            src="../../../image/banner.jpg"
+		            src="{{item.imageUrl}}"
 		            background-size="cover"
 		        ></image>
 		        <view class="desc">
-		        	<view class="name">项目名称：店族</view>
-		        	<view class="time">开发时间：2017年4月至2017年7月</view>
-		        	<view class="type">项目类型：微信公众号</view>
-		        </view>
-	        </navigator>
-	        <view class="list">
-	        	<image
-		            class="img"
-		            src="../../../image/banner.jpg"
-		            background-size="cover"
-		        ></image>
-		        <view class="desc">
-		        	<view class="name">项目名称：优网科技</view>
-		        	<view class="time">开发时间：2017年9月至2017年12月</view>
-		        	<view class="type">项目类型：后台管理系统</view>
-		        </view>
-	        </view>
-	        <view class="list">
-	        	<image
-		            class="img"
-		            src="../../../image/banner.jpg"
-		            background-size="cover"
-		        ></image>
-		        <view class="desc">
-		        	<view class="name">项目名称：影大人</view>
-		        	<view class="time">开发时间：2016年7月至2016年9月</view>
-		        	<view class="type">项目类型：PC端</view>
+		        	<view class="name">项目名称：{{item.name}}</view>
+		        	<view class="time">开发时间：{{item.time}}</view>
+		        	<view class="type">项目类型：{{item.type}}</view>
 		        </view>
 	        </view>
         </view>

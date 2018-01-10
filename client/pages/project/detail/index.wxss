@@ -5,6 +5,9 @@ page {
     flex-direction: column;
     justify-content: flex-start;
 }
+.container-project-detail{
+    background: #fff;
+}
 
 .header{
     display: flex;

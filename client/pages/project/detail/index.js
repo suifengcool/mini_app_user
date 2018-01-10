@@ -13,9 +13,17 @@ Page({
             {url:'../../../image/ydr.png'} ,    
             {url:'../../../image/weixin2.png'}     
         ],
+        projectDeail : {}
     },
 
     onLoad: function(options){
+        var _this = this;
+        wx.getStorage({
+            key:'projectDeail',
+            success: function(res) {
+                _this.getStorage(res)
+            } 
+        })
 		this.setData({
 			id: options.id
 		})
@@ -25,5 +33,11 @@ Page({
 		this.setData({
             currentTab : e.currentTarget.dataset.tab
         })
-    }
+    },
+
+    getStorage (res){
+        this.setData({
+            projectDeail : res.data
+        })
+    },
 })
