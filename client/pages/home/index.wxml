@@ -341,7 +341,7 @@
             <i class="iconfont icon-bianji2"></i>
         </view>
         <view class="user-list">
-            <navigator url="../schedule/detail/index" class="border-bottom list-item">
+            <navigator url="../schedule/index/index" class="border-bottom list-item">
                 <view class="list-item-text"><i class="iconfont icon-rili1"></i>我的日程</view>
                 <i class="iconfont icon-jiantou3"></i>
             </navigator>

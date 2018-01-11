@@ -8,6 +8,7 @@
 		"pages/issue/detail/index",
 		"pages/issue/create/index",
 		"pages/schedule/detail/index",
+		"pages/schedule/index/index",
 		"pages/schedule/create/index",
 		"pages/joke/index/index",
 		"pages/auth/index/index",
@@ -18,6 +19,7 @@
 		"backgroundTextStyle":"light",
 		"navigationBarBackgroundColor": "#F6F6F6",
 		"navigationBarTitleText": "随风-Web Developer",
-		"navigationBarTextStyle":"black"
+		"navigationBarTextStyle":"black",
+		"enablePullDownRefresh": true
     }
 }

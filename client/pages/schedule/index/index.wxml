@@ -1,0 +1,56 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="month-cantain">
+        <view class="week-box">
+            <text class="week-item" wx:for="{{weekList}}" wx:key="unique">{{item}}</text>
+        </view>
+        <view wx:if="{{showMonth}}" class="month">
+            <view class="month-item">
+                <view 
+                    wx:for="{{currentMonthList}}" 
+                    wx:key="unique" 
+                    class="month-item-box"
+                >
+                    <view wx:if="{{item && item != ''}}" class="num" bindtap="chooseDay" data-choosed="{{item}}">
+                        <view class="num-item {{item == day ? 'on' : ''}}">{{item}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view wx:if="{{!showMonth}}" class="header">
+    	<view class="week" wx:for="{{weekList}}" wx:key="unique">       
+	        {{item}}  
+        </view> 
+        <view class="day" wx:for="{{dayList}}" wx:key="unique">       
+	        <view 
+                class="{{chooseDay == item ? 'choosed' : ''}} day-num {{ item == today ? 'active' : ''}}" 
+                bindtap="chooseDay" 
+                data-choosed="{{item}}"
+            >
+                {{item}}
+            </view> 
+        </view> 
+        <view class="date">
+        	{{year}}年{{month}}月{{day}}日 
+        	<i>周{{['日','一','二','三','四','五','六'][WeekDay == 7 ? 0 : WeekDay]}}</i>
+    	</view>
+    </view>
+    <view class="event-list" wx:for="{{eventList}}" wx:key="unique">
+        <view class="event-item">
+            <view class="title">{{item.event_title}}</view>
+            <view class="content">{{item.event_detail}}</view>
+        </view>
+    </view>
+    <view wx:if="{{eventList.length <= 0}}" class="eventNone">
+        <image
+            class="none-img"
+            src="../../../image/nostatus.png"
+            background-size="cover"
+        ></image>
+        <view class="text">还没有日程哦~</view>
+    </view>
+    <navigator url="../create/index" class="create">
+        <i class="iconfont icon-jiahao1"></i>新建日程
+    </navigator>
+</view>

@@ -49,7 +49,6 @@ Page({
                 bg_color = '#f4f4f4';
                 title = '随风-Web Developer';
         }
-        console.log('bg_color:',bg_color)
         wx.setNavigationBarColor({
             frontColor: color,
             backgroundColor: bg_color
