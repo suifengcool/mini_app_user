@@ -97,3 +97,11 @@
   align-items: center;
   box-sizing: border-box;
 } 
+
+.icon-jiahao3{
+    position:fixed;
+    bottom:50rpx;
+    right:40rpx;
+    font-size:28pt;
+    color:#03ca9d;
+}

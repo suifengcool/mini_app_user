@@ -1,40 +1,265 @@
 /**index.wxss**/
 page {
-    background-color: rgba(255,191,0,0.44);
+    background: #F6F6F6;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    font-family: PingFangSC-Regular;
+}
+.banner{
+    height: 300rpx;
+    width: 100%;
+    position: relative;
+}
+.banner-img{
+    height: 392rpx;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%)
+}
+.auth-img-box{
+    position: absolute;
+    bottom: -100rpx;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 180rpx;
+    height: 180rpx;
+    padding: 4rpx;
+    background: #fff;
+    text-align: center;
+}
+.auth-img{
+    width: 98%;
+    height: 98%;
+}
+.auth-box{
+    text-align: center;
+    margin-top: 110rpx;
+    font-size: 14pt;
+}
+.auth-box i{
+    font-size: 12pt;
+    margin-left: 20rpx;
+    vertical-align: 9%;
+}
+.auth-line{
+    width: 100%;
+    height: 10rpx;
+    background: #dedede;
+    margin-top: 30rpx;
+}
+.auth-job{
+    margin: 20rpx 0;
+    font-size: 11pt;
+}
+.auth-decs{
+    font-size: 24rpx;
+    color: #979797;
 }
 
-.userinfo {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+.nav-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 50rpx 60rpx 0 60rpx;
+    box-sizing: border-box;
+    font-size: 10pt;
+    text-align: center;
+}
+.nav-box .nav{
+    width: 140rpx;
+}
+.nav-box .nav .nav-img{
+    width: 100%;
+    height: 140rpx;
+    border-radius: 50%;
 }
 
-.userinfo-avatar {
-	width: 150rpx;
-	height: 150rpx;
-	border-radius: 50%;
-	margin: 200rpx 0 40rpx 0;
+.info-box{
+    width: 90%;
+    margin: 0 auto;
+    font-size: 10pt;
+    line-height: 44rpx;
 }
-.userinfo-nickname {
-	color: #777;
-	font-size: 15px;
+.info-title{
+    font-size: 12pt;
+    height: 90rpx;
+    line-height: 90rpx;
+    border-bottom: 0.5rpx solid #dedede;
+    text-align: center;
+}
+.info-box i{
+    font-size: 12pt;
+    margin-left: 10rpx;
+}
+.info-detail{
+    font-size: 10pt;
+    padding: 15rpx 0;
+    border-bottom: 0.5rpx solid #dedede;
 }
 
-.userinfo-guide{
-	position: fixed;
-	left: 0%;
-	top: 70%;
-	width: 100%;
+
+.tab {
+    position: fixed;
+    bottom: 0;
+    height: 100rpx;
+    width: 100%;
+    background: #F8F8FA;
+    font-size: 24rpx;
+    white-space: nowrap;
+    border-top: .5rpx solid #dedede;
+}
+.tab_item {
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+}
+.active {
+    color: #03ca9d;
+}
+.iconfont-tab {
+    margin-top: 14rpx;
+    width: 55rpx;
+    height: 55rpx;
+    line-height: 55rpx;
+    display: inline-block;
+    font-size: 40rpx;
+    text-aglin: center;
+}
+.title {
+    display: block;
+}
+.container-home, .container-user, .container-schedule, .container-issuse{
+    width: 100%;
+    margin-bottom: 100rpx;
+}
+.container-schedule{
+    padding-top: 50rpx;
+}
+.week-box{
+    height: 48rpx;
+    line-height: 48rpx;
+    background: #F9F9F9;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+.week-item{
+    display: inline-block;
+    width: 14.286%;
+    text-align: center;
+    font-size: 24rpx;
+    color: #333;
+}
+.month{
+    background: #fff;
+}    
+.month-title{ 
+    font-weight: 300;
+    font-family: PingFangSC-Medium;
+    font-size: 1rem;
+    color: #000;
+    text-align: right;
+    padding: 0  .43rem .26rem 0;
+    line-height: 1.4rem;
+}
+.month-title:after{
+    left: 85%;
+    width: 15%;
+}
+.month-item .month-item-box{
+    margin-top: .175rem;
+    display: inline-block;
+    width: 14.286%;
+    text-align: center;
+    font-size: .6rem;
+    color: #333;
+    padding-bottom: .15rem;
+}
+.num{
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+    margin-top: .25rem;
+    color: #000;
+    height: 80rpx;
+    position: relative;
+}
+.num-item{
+    width: 1.7rem;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.on{
+    background: #FD834B;
+    color: #fff;
+}
+.event-list{
+    width: 100%;
+    overflow: hidden;
+    line-height: 10rpx;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+.point-img{
+    width: 85%;
+    height: 20rpx;
 }
 
-.userinfo-guide button{
-	width: 50%;
-	background: rgba(241, 170, 51, 0.58);
-	font-size: 36rpx;
-	height: 80rpx;
-	line-height: 80rpx;
-	color: rgb(107, 90, 90);
+
+
+.project-skill-box .project-skill-title{
+    height: 90rpx;
+    line-height: 90rpx;
+    text-align: center;
+    border-bottom: 0.5rpx solid #dedede;
+    margin-bottom: 30rpx;
+    font-size: 12pt;
+}
+
+.project-skill-box .project-skill-detail{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.project-skill-detail-item-box{
+    position: relative;
+    width: 33.333%;
+    margin-bottom: 30rpx;
+    text-align: center;
+}
+.project-skill-detail-item-box::after{
+    display: inline-block;
+    content: '';
+    height: 0.5rpx;
+    width: 80%;
+    background: #dedede;
+}
+.project-skill-detail-item-box::before{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    content: '';
+    height: 80%;
+    width: 0.5rpx;
+    background: #dedede;
+}
+.project-skill-detail-item-box i{
+    font-size: 20pt;
+    display: block;
+}
+.project-skill-detail-item-box .project-skill-detail-item-text{
+    font-size: 10pt;
+    margin-top: 10rpx;
+}
+.project-type i{
+    color: #333;
 }

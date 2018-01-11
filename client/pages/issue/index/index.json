@@ -1,0 +1,8 @@
+{
+	"enablePullDownRefresh": false,
+	"backgroundColor":"#55cbc4",
+	"backgroundTextStyle":"light",
+	"navigationBarBackgroundColor": "#55cbc4",
+	"navigationBarTitleText": "问答",
+	"navigationBarTextStyle":"#ffffff"
+}

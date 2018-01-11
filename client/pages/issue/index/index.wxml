@@ -1,0 +1,104 @@
+<!-- 问答 -->
+<view class="container container-issuse">
+    <view class="hot-box">
+        <view class="hot-head">
+            <view class="hot-head-title-left">
+                <view class="hot-head-title">
+                    <i class="iconfont icon-hot"></i>
+                    热门推荐
+                </view>
+            </view>
+            <view class="hot-head-title-right">
+                <i class="iconfont icon-refresh"></i>
+                <i class="iconfont icon-close"></i>
+            </view>
+        </view>
+        <view class="hot-list">
+            <view class="hot-item">
+                <view class="hot-item-title">前端模块化，AMD和CMD的区别</view>
+                <view class="hot-item-tips">
+                    <i class="iconfont icon-dianzan"></i>127
+                    <i class="iconfont icon-head"></i>Suifeng
+                    <i class="iconfont icon-clock"></i>1天前
+                </view>
+            </view>
+            <view class="hot-item">
+                <view class="hot-item-title">前端模块化，AMD和CMD的区别</view>
+                <view class="hot-item-tips">
+                    <i class="iconfont icon-dianzan"></i>127
+                    <i class="iconfont icon-head"></i>Suifeng
+                    <i class="iconfont icon-clock"></i>1天前
+                </view>
+            </view>
+            <view class="hot-item">
+                <view class="hot-item-title">前端模块化，AMD和CMD的区别</view>
+                <view class="hot-item-tips">
+                    <i class="iconfont icon-dianzan"></i>127
+                    <i class="iconfont icon-head"></i>Suifeng
+                    <i class="iconfont icon-clock"></i>1天前
+                </view>
+            </view>
+        </view>
+        <view class="issue-line"></view>
+    </view>
+    <view class="issue-list">
+        <navigator url="../issue/detail/index" class="issue-item">   
+            <view class="issue-item-header">
+                <view class="issue-item-header-left">
+                    <image
+                        class="issue-item-header-left-img"
+                        src="../../../image/me.jpg"
+                        background-size="cover"
+                    ></image>
+                    <view class="issue-item-header-left-auth">
+                        双十二技术哥
+                    </view>
+                </view>
+                <view class="issue-item-header-right">
+                    前端/VueJS
+                </view>
+            </view>
+            <view class="issue-item-title">
+                深入Weex系列（九）可借鉴细节总结深入Weex系列（九）可借鉴细节总结深入Weex系列（九）可借鉴细节总结
+            </view>
+            <view class="issue-item-content">
+                前端技术日新月异，三大框架盛行的年代，正是web developer 大展宏图的好时期。选择何种框架，要根据公司实际业务。比如我现在公司是做企业后台，业务逻辑复杂，客户对表格的要求很高，这种情况下，使用react会比较合适，特别是基于react和redux的最佳实践dva框架，体验非常好！但是像之前上海的公司，只涉及微信商城构建，主要难点是订单流，业务不算复杂，这种情况下，使用vue会更加合适。轻量、高效，上手快，是小公司的绝佳选择。 　　 　　
+            </view>
+            <view class="issue-item-bottom">
+                <i class="iconfont icon-aixin2"></i>127
+                <i class="iconfont icon-pinglun"></i>评论
+            </view>
+            <view class="issue-line"></view>
+        </navigator>
+        <view class="issue-item">   
+            <view class="issue-item-header">
+                <view class="issue-item-header-left">
+                    <image
+                        class="issue-item-header-left-img"
+                        src="../../../image/me.jpg"
+                        background-size="cover"
+                    ></image>
+                    <view class="issue-item-header-left-auth">
+                        双十二技术哥
+                    </view>
+                </view>
+                <view class="issue-item-header-right">
+                    前端/VueJS
+                </view>
+            </view>
+            <view class="issue-item-title">
+                深入Weex系列（九）可借鉴细节总结深入Weex系列（九）可借鉴细节总结深入Weex系列（九）可借鉴细节总结
+            </view>
+            <view class="issue-item-content">
+                前端技术日新月异，三大框架盛行的年代，正是web developer 大展宏图的好时期。选择何种框架，要根据公司实际业务。比如我现在公司是做企业后台，业务逻辑复杂，客户对表格的要求很高，这种情况下，使用react会比较合适，特别是基于react和redux的最佳实践dva框架，体验非常好！但是像之前上海的公司，只涉及微信商城构建，主要难点是订单流，业务不算复杂，这种情况下，使用vue会更加合适。轻量、高效，上手快，是小公司的绝佳选择。 　　 　　
+            </view>
+            <view class="issue-item-bottom">
+                <i class="iconfont icon-aixin2"></i>127
+                <i class="iconfont icon-pinglun"></i>评论
+            </view>
+            <view class="issue-line"></view>
+        </view>
+    </view>
+
+    <navigator url="../issue/create/index"><i class="iconfont icon-jiahao3"></i></navigator>
+</view>

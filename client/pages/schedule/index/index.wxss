@@ -24,12 +24,26 @@ page {
     color: #333;
 }
 .date{
-	font-size: 10pt;
-	text-align: center;
-	margin-top:20rpx;
+    width: 100%;
+    font-size:10pt;
+}
+.date1{
+    background:#dedede;
+    height:60rpx;
+    line-height:60rpx;
+    padding-left:30rpx;
+    text-align: left;
+    margin-top: -50rpx;
+}
+.date-title{
+    margin-right: 20rpx;
+}
+.date2{
+    text-align: center;
+    margin-top:20rpx;
 }
 .date i{
-	margin-left: 20rpx;
+	margin-left: 15rpx;
 }
 .day-num{
     height:50rpx;
@@ -58,29 +72,16 @@ page {
     border-radius: 5rpx;
     background: #FD834B;
 }
+.event-item .time{
+    font-size: 9pt;
+    margin: 20rpx 0 10rpx 0;
+}
 .event-item .title{
     font-size: 14pt;
-    margin-bottom: 30rpx;
 }
 .event-item .content{
     font-size: 9pt;
     line-height: 1.5;
-}
-.create{
-    position: fixed;
-    height: 90rpx;
-    line-height: 90rpx;
-    width: 100%;
-    color: #fff;
-    background: #55cbc4;
-    text-align: center;
-    font-size: 10pt;
-    bottom: 0;
-    left: 0;
-}
-.create i{
-    margin-right: 20rpx;
-    font-size: 12pt;
 }
 .eventNone{
     width:60%;

@@ -1,0 +1,8 @@
+{
+	"enablePullDownRefresh": false,
+	"backgroundColor":"#55cbc4",
+	"backgroundTextStyle":"light",
+	"navigationBarBackgroundColor": "#333333",
+	"navigationBarTitleText": "随风-Web Developer",
+	"navigationBarTextStyle":"#333333"
+}

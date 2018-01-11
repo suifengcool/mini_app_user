@@ -1,0 +1,85 @@
+/**index.wxss**/
+page {
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.container-user-header{
+    width: 100%;
+    height: 400rpx;
+    background-size: cover;
+    position: relative;
+    background: green;
+}
+.container-user-header-img{
+    width: 100%;
+    height: 100%;
+}
+.container-user-header .container-user-header-title{
+    font-size: 44rpx;
+    color: #fff;
+    padding-left: 30rpx;
+    position: absolute;
+    left: 10rpx;
+    bottom: 10rpx;
+}
+.border-bottom{
+    border-bottom: 0.5rpx solid #dedede;
+    padding: 0 30rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    font-size: 30rpx;
+    display: block;
+}
+
+.container-user-header i{ 
+    position: absolute;
+    right: 40rpx;
+    bottom: -30rpx;
+    display: inline-block;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    width: 80rpx;
+    background: #03ca9d;
+    border-radius: 50%;
+    font-size: 14pt;
+    color: #fff;
+}
+.user-list{
+    margin-top: 32rpx;
+    width: 100%;
+}
+.user-list .list-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 0 26rpx;
+}
+.list-item-text{
+    height: 90rpx;
+    line-height: 90rpx;
+    font-size: 30rpx;
+    display: block;
+}
+.list-item-text i{
+    vertical-align: -3.5%;
+}
+.user-list .icon-rili1{
+    font-size: 16pt;
+    margin-right: 3rpx;
+}
+.user-list .icon-dianhua{
+    font-size: 15pt;
+    margin-right:7rpx;
+}
+.user-list .icon-wenda2{
+    margin-left: 5rpx;
+    margin-right:9rpx;
+    font-size: 13pt;
+}
+.user-list .icon-jiantou3{
+    font-size: 13pt;
+    margin-right: 30rpx;
+}

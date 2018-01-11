@@ -1,0 +1,25 @@
+<view class="container container-user">
+    <view class="container-user-header">
+        <image
+            class="container-user-header-img"
+            src="{{userInfo.avatarUrl}}"
+            background-size="cover"
+        ></image>
+        <view class="container-user-header-title">{{userInfo.nickName}}</view>
+        <i class="iconfont icon-bianji2"></i>
+    </view>
+    <view class="user-list">
+        <navigator url="../../schedule/index/index" class="border-bottom list-item">
+            <view class="list-item-text"><i class="iconfont icon-rili1"></i>我的日程</view>
+            <i class="iconfont icon-jiantou3"></i>
+        </navigator>
+        <navigator url="../../issue/detail/index" class="border-bottom list-item">
+            <view class="list-item-text"><i class="iconfont icon-wenda2"></i>我的问答</view>
+            <i class="iconfont icon-jiantou3"></i>
+        </navigator>
+        <navigator url="" class="border-bottom list-item">
+            <view class="list-item-text"><i class="iconfont icon-dianhua"></i>联系我们</view>
+            <i class="iconfont icon-jiantou3"></i>
+        </navigator>
+    </view>
+</view>

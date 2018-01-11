@@ -1,0 +1,119 @@
+page {
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.hot-box{
+    margin-top: 20rpx;
+    font-size: 11pt;
+    width: 100%;
+}
+.hot-head{
+    height: 90rpx;
+    line-height: 90rpx;
+    padding: 0 30rpx;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.5rpx solid #dedede;
+}
+.icon-hot{
+    margin-right: 10rpx;
+    font-size: 12pt;
+    color: rgb(246, 54, 91);
+}
+.icon-refresh, .icon-close{
+    display: inline-block;
+    height: 100%;
+    width: 70rpx;
+    text-align: center;
+    font-size: 10pt;
+    color: #979797;
+}
+.hot-list{
+    padding: 0 30rpx;
+}
+.hot-item{
+    border-bottom: 0.5rpx solid #dedede;
+}
+.hot-item-title{
+    margin: 20rpx 0;
+}
+.hot-item-tips{
+    color: #979797;
+    margin-bottom: 30rpx;
+    font-size: 8pt;
+}
+.hot-item-tips .iconfont{
+    font-size: 7pt;
+}
+.icon-dianzan{
+    margin-right: 4rpx;
+}
+.icon-head, .icon-clock{
+    margin: 0 4rpx 0 15rpx;
+}
+.issue-line{
+    width: 100%;
+    height: 10rpx;
+    background: #dedede;
+}
+.issue-list{
+    padding:0 30rpx;
+}
+.issue-item{
+
+}
+.issue-item-header{
+    display: flex;
+    justify-content: space-between;
+    font-size: 9pt;
+    margin-top: 30rpx;
+}
+.issue-item-header-left{
+    display: flex;
+}
+.issue-item-header-left-img{
+    width: 35rpx;
+    height: 35rpx;
+    border-radius: 50%;
+    margin-right: 6rpx;
+}
+.issue-item-header-left-auth{
+    color: #333;
+}
+.issue-item-header-right{
+    color: #979797;
+    font-size:9pt;
+}
+.issue-item-title{
+    font-size: 11pt;
+    margin-top: 15rpx;
+    display: inline-block;   
+    width: 95%;
+    height: 42rpx;
+    overflow: hidden; 
+}
+.issue-item-content{
+    margin: 5rpx 0 15rpx 0;
+    color: #979797;
+    font-size: 10pt;
+    overflow:hidden; 
+    text-overflow:ellipsis;
+    display:-webkit-box; 
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:3;
+}
+.issue-item-bottom{
+    margin-bottom: 30rpx;
+    color: #979797;
+    font-size:9pt;
+}
+.issue-item-bottom .iconfont{
+    font-size: 11pt;
+    margin-right: 4rpx;
+    vertical-align: -5%;
+}
+.icon-pinglun{
+    margin-left: 50rpx;
+}
